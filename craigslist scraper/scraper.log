@@ -1,0 +1,1901 @@
+2019-06-07 15:15:45,965 ====================entered main===================
+2019-06-07 15:15:45,965 loaded json
+2019-06-07 15:15:45,965 executing search: exercise bike
+2019-06-07 15:15:45,965 processed search terms
+2019-06-07 15:15:45,966 running search for: exercise+bike
+2019-06-07 15:15:45,966 https://baltimore.craigslist.org/search/zip?query=exercise+bike
+2019-06-07 15:15:45,968 Starting new HTTPS connection (1): baltimore.craigslist.org:443
+2019-06-07 15:15:46,108 https://baltimore.craigslist.org:443 "GET /search/zip?query=exercise+bike HTTP/1.1" 200 11497
+2019-06-07 15:15:46,112 issued request: exercise+bike
+2019-06-07 15:15:46,113 200
+2019-06-07 15:15:46,174 running search for: bicycle
+2019-06-07 15:15:46,174 https://baltimore.craigslist.org/search/zip?query=bicycle
+2019-06-07 15:15:46,176 Starting new HTTPS connection (1): baltimore.craigslist.org:443
+2019-06-07 15:15:46,285 https://baltimore.craigslist.org:443 "GET /search/zip?query=bicycle HTTP/1.1" 200 10907
+2019-06-07 15:15:46,289 issued request: bicycle
+2019-06-07 15:15:46,290 200
+2019-06-07 15:15:46,339 running search for: stationary+bike
+2019-06-07 15:15:46,340 https://baltimore.craigslist.org/search/zip?query=stationary+bike
+2019-06-07 15:15:46,341 Starting new HTTPS connection (1): baltimore.craigslist.org:443
+2019-06-07 15:15:46,450 https://baltimore.craigslist.org:443 "GET /search/zip?query=stationary+bike HTTP/1.1" 200 10455
+2019-06-07 15:15:46,460 issued request: stationary+bike
+2019-06-07 15:15:46,461 200
+2019-06-07 15:15:46,507 end searching for: exercise bike
+2019-06-07 15:15:46,507 finished searching
+2019-06-07 15:15:46,507 saved last run data
+2019-06-07 16:00:01,740 ====================entered main===================
+2019-06-07 16:00:01,741 loaded json
+2019-06-07 16:00:01,741 executing search: exercise bike
+2019-06-07 16:00:01,741 processed search terms
+2019-06-07 16:00:01,741 running search for: exercise+bike
+2019-06-07 16:00:01,741 https://baltimore.craigslist.org/search/zip?query=exercise+bike
+2019-06-07 16:00:01,744 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-07 16:00:01,853 "GET /search/zip?query=exercise+bike HTTP/1.1" 403 117
+2019-06-07 16:00:01,860 issued request: exercise+bike
+2019-06-07 16:00:01,861 403
+2019-06-07 16:00:01,876 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-07 16:00:01,876 running search for: bicycle
+2019-06-07 16:00:01,876 https://baltimore.craigslist.org/search/zip?query=bicycle
+2019-06-07 16:00:01,877 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-07 16:00:01,960 "GET /search/zip?query=bicycle HTTP/1.1" 403 117
+2019-06-07 16:00:01,962 issued request: bicycle
+2019-06-07 16:00:01,963 403
+2019-06-07 16:00:01,963 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-07 16:00:01,964 running search for: stationary+bike
+2019-06-07 16:00:01,964 https://baltimore.craigslist.org/search/zip?query=stationary+bike
+2019-06-07 16:00:01,965 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-07 16:00:02,054 "GET /search/zip?query=stationary+bike HTTP/1.1" 403 117
+2019-06-07 16:00:02,057 issued request: stationary+bike
+2019-06-07 16:00:02,057 403
+2019-06-07 16:00:02,057 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-07 16:00:02,058 end searching for: exercise bike
+2019-06-07 16:00:02,059 finished searching
+2019-06-07 16:00:02,059 saved last run data
+2019-06-07 17:00:01,302 ====================entered main===================
+2019-06-07 17:00:01,303 loaded json
+2019-06-07 17:00:01,303 executing search: exercise bike
+2019-06-07 17:00:01,303 processed search terms
+2019-06-07 17:00:01,303 running search for: exercise+bike
+2019-06-07 17:00:01,303 https://baltimore.craigslist.org/search/zip?query=exercise+bike
+2019-06-07 17:00:01,306 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-07 17:00:01,459 "GET /search/zip?query=exercise+bike HTTP/1.1" 403 117
+2019-06-07 17:00:01,462 issued request: exercise+bike
+2019-06-07 17:00:01,463 403
+2019-06-07 17:00:01,477 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-07 17:00:01,478 running search for: bicycle
+2019-06-07 17:00:01,478 https://baltimore.craigslist.org/search/zip?query=bicycle
+2019-06-07 17:00:01,479 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-07 17:00:01,602 "GET /search/zip?query=bicycle HTTP/1.1" 403 117
+2019-06-07 17:00:01,605 issued request: bicycle
+2019-06-07 17:00:01,605 403
+2019-06-07 17:00:01,605 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-07 17:00:01,606 running search for: stationary+bike
+2019-06-07 17:00:01,606 https://baltimore.craigslist.org/search/zip?query=stationary+bike
+2019-06-07 17:00:01,607 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-07 17:00:01,727 "GET /search/zip?query=stationary+bike HTTP/1.1" 403 117
+2019-06-07 17:00:01,739 issued request: stationary+bike
+2019-06-07 17:00:01,740 403
+2019-06-07 17:00:01,741 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-07 17:00:01,742 end searching for: exercise bike
+2019-06-07 17:00:01,743 finished searching
+2019-06-07 17:00:01,744 saved last run data
+2019-06-07 18:00:01,982 ====================entered main===================
+2019-06-07 18:00:01,982 loaded json
+2019-06-07 18:00:01,982 executing search: exercise bike
+2019-06-07 18:00:01,982 processed search terms
+2019-06-07 18:00:01,982 running search for: exercise+bike
+2019-06-07 18:00:01,982 https://baltimore.craigslist.org/search/zip?query=exercise+bike
+2019-06-07 18:00:01,986 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-07 18:00:02,125 "GET /search/zip?query=exercise+bike HTTP/1.1" 403 117
+2019-06-07 18:00:02,132 issued request: exercise+bike
+2019-06-07 18:00:02,133 403
+2019-06-07 18:00:02,146 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-07 18:00:02,147 running search for: bicycle
+2019-06-07 18:00:02,147 https://baltimore.craigslist.org/search/zip?query=bicycle
+2019-06-07 18:00:02,148 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-07 18:00:02,266 "GET /search/zip?query=bicycle HTTP/1.1" 403 117
+2019-06-07 18:00:02,269 issued request: bicycle
+2019-06-07 18:00:02,269 403
+2019-06-07 18:00:02,269 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-07 18:00:02,270 running search for: stationary+bike
+2019-06-07 18:00:02,270 https://baltimore.craigslist.org/search/zip?query=stationary+bike
+2019-06-07 18:00:02,271 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-07 18:00:02,383 "GET /search/zip?query=stationary+bike HTTP/1.1" 403 117
+2019-06-07 18:00:02,389 issued request: stationary+bike
+2019-06-07 18:00:02,390 403
+2019-06-07 18:00:02,390 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-07 18:00:02,391 end searching for: exercise bike
+2019-06-07 18:00:02,391 finished searching
+2019-06-07 18:00:02,391 saved last run data
+2019-06-07 19:00:01,638 ====================entered main===================
+2019-06-07 19:00:01,639 loaded json
+2019-06-07 19:00:01,639 executing search: exercise bike
+2019-06-07 19:00:01,639 processed search terms
+2019-06-07 19:00:01,639 running search for: exercise+bike
+2019-06-07 19:00:01,639 https://baltimore.craigslist.org/search/zip?query=exercise+bike
+2019-06-07 19:00:01,642 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-07 19:00:01,775 "GET /search/zip?query=exercise+bike HTTP/1.1" 403 117
+2019-06-07 19:00:01,778 issued request: exercise+bike
+2019-06-07 19:00:01,779 403
+2019-06-07 19:00:01,795 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-07 19:00:01,796 running search for: bicycle
+2019-06-07 19:00:01,796 https://baltimore.craigslist.org/search/zip?query=bicycle
+2019-06-07 19:00:01,797 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-07 19:00:01,910 "GET /search/zip?query=bicycle HTTP/1.1" 403 117
+2019-06-07 19:00:01,917 issued request: bicycle
+2019-06-07 19:00:01,918 403
+2019-06-07 19:00:01,918 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-07 19:00:01,920 running search for: stationary+bike
+2019-06-07 19:00:01,921 https://baltimore.craigslist.org/search/zip?query=stationary+bike
+2019-06-07 19:00:01,922 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-07 19:00:02,037 "GET /search/zip?query=stationary+bike HTTP/1.1" 403 117
+2019-06-07 19:00:02,045 issued request: stationary+bike
+2019-06-07 19:00:02,046 403
+2019-06-07 19:00:02,046 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-07 19:00:02,047 end searching for: exercise bike
+2019-06-07 19:00:02,047 finished searching
+2019-06-07 19:00:02,047 saved last run data
+2019-06-07 20:00:01,301 ====================entered main===================
+2019-06-07 20:00:01,302 loaded json
+2019-06-07 20:00:01,302 executing search: exercise bike
+2019-06-07 20:00:01,302 processed search terms
+2019-06-07 20:00:01,302 running search for: exercise+bike
+2019-06-07 20:00:01,302 https://baltimore.craigslist.org/search/zip?query=exercise+bike
+2019-06-07 20:00:01,305 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-07 20:00:01,450 "GET /search/zip?query=exercise+bike HTTP/1.1" 403 117
+2019-06-07 20:00:01,452 issued request: exercise+bike
+2019-06-07 20:00:01,452 403
+2019-06-07 20:00:01,468 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-07 20:00:01,469 running search for: bicycle
+2019-06-07 20:00:01,469 https://baltimore.craigslist.org/search/zip?query=bicycle
+2019-06-07 20:00:01,470 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-07 20:00:01,610 "GET /search/zip?query=bicycle HTTP/1.1" 403 117
+2019-06-07 20:00:01,622 issued request: bicycle
+2019-06-07 20:00:01,622 403
+2019-06-07 20:00:01,622 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-07 20:00:01,623 running search for: stationary+bike
+2019-06-07 20:00:01,623 https://baltimore.craigslist.org/search/zip?query=stationary+bike
+2019-06-07 20:00:01,624 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-07 20:00:01,739 "GET /search/zip?query=stationary+bike HTTP/1.1" 403 117
+2019-06-07 20:00:01,743 issued request: stationary+bike
+2019-06-07 20:00:01,743 403
+2019-06-07 20:00:01,743 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-07 20:00:01,744 end searching for: exercise bike
+2019-06-07 20:00:01,744 finished searching
+2019-06-07 20:00:01,745 saved last run data
+2019-06-07 21:00:01,998 ====================entered main===================
+2019-06-07 21:00:01,998 loaded json
+2019-06-07 21:00:01,998 executing search: exercise bike
+2019-06-07 21:00:01,998 processed search terms
+2019-06-07 21:00:01,998 running search for: exercise+bike
+2019-06-07 21:00:01,998 https://baltimore.craigslist.org/search/zip?query=exercise+bike
+2019-06-07 21:00:02,002 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-07 21:00:02,160 "GET /search/zip?query=exercise+bike HTTP/1.1" 403 117
+2019-06-07 21:00:02,166 issued request: exercise+bike
+2019-06-07 21:00:02,167 403
+2019-06-07 21:00:02,182 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-07 21:00:02,183 running search for: bicycle
+2019-06-07 21:00:02,183 https://baltimore.craigslist.org/search/zip?query=bicycle
+2019-06-07 21:00:02,184 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-07 21:00:02,298 "GET /search/zip?query=bicycle HTTP/1.1" 403 117
+2019-06-07 21:00:02,309 issued request: bicycle
+2019-06-07 21:00:02,309 403
+2019-06-07 21:00:02,310 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-07 21:00:02,310 running search for: stationary+bike
+2019-06-07 21:00:02,310 https://baltimore.craigslist.org/search/zip?query=stationary+bike
+2019-06-07 21:00:02,312 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-07 21:00:02,440 "GET /search/zip?query=stationary+bike HTTP/1.1" 403 117
+2019-06-07 21:00:02,452 issued request: stationary+bike
+2019-06-07 21:00:02,453 403
+2019-06-07 21:00:02,453 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-07 21:00:02,455 end searching for: exercise bike
+2019-06-07 21:00:02,455 finished searching
+2019-06-07 21:00:02,456 saved last run data
+2019-06-07 22:00:01,700 ====================entered main===================
+2019-06-07 22:00:01,700 loaded json
+2019-06-07 22:00:01,700 executing search: exercise bike
+2019-06-07 22:00:01,700 processed search terms
+2019-06-07 22:00:01,700 running search for: exercise+bike
+2019-06-07 22:00:01,700 https://baltimore.craigslist.org/search/zip?query=exercise+bike
+2019-06-07 22:00:01,704 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-07 22:00:01,862 "GET /search/zip?query=exercise+bike HTTP/1.1" 403 117
+2019-06-07 22:00:01,871 issued request: exercise+bike
+2019-06-07 22:00:01,871 403
+2019-06-07 22:00:01,886 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-07 22:00:01,887 running search for: bicycle
+2019-06-07 22:00:01,887 https://baltimore.craigslist.org/search/zip?query=bicycle
+2019-06-07 22:00:01,888 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-07 22:00:02,022 "GET /search/zip?query=bicycle HTTP/1.1" 403 117
+2019-06-07 22:00:02,030 issued request: bicycle
+2019-06-07 22:00:02,031 403
+2019-06-07 22:00:02,031 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-07 22:00:02,032 running search for: stationary+bike
+2019-06-07 22:00:02,032 https://baltimore.craigslist.org/search/zip?query=stationary+bike
+2019-06-07 22:00:02,033 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-07 22:00:02,158 "GET /search/zip?query=stationary+bike HTTP/1.1" 403 117
+2019-06-07 22:00:02,164 issued request: stationary+bike
+2019-06-07 22:00:02,165 403
+2019-06-07 22:00:02,166 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-07 22:00:02,166 end searching for: exercise bike
+2019-06-07 22:00:02,166 finished searching
+2019-06-07 22:00:02,167 saved last run data
+2019-06-07 23:00:01,410 ====================entered main===================
+2019-06-07 23:00:01,411 loaded json
+2019-06-07 23:00:01,411 executing search: exercise bike
+2019-06-07 23:00:01,411 processed search terms
+2019-06-07 23:00:01,411 running search for: exercise+bike
+2019-06-07 23:00:01,411 https://baltimore.craigslist.org/search/zip?query=exercise+bike
+2019-06-07 23:00:01,414 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-07 23:00:01,535 "GET /search/zip?query=exercise+bike HTTP/1.1" 403 117
+2019-06-07 23:00:01,538 issued request: exercise+bike
+2019-06-07 23:00:01,539 403
+2019-06-07 23:00:01,554 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-07 23:00:01,555 running search for: bicycle
+2019-06-07 23:00:01,555 https://baltimore.craigslist.org/search/zip?query=bicycle
+2019-06-07 23:00:01,556 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-07 23:00:01,649 "GET /search/zip?query=bicycle HTTP/1.1" 403 117
+2019-06-07 23:00:01,652 issued request: bicycle
+2019-06-07 23:00:01,652 403
+2019-06-07 23:00:01,652 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-07 23:00:01,652 running search for: stationary+bike
+2019-06-07 23:00:01,653 https://baltimore.craigslist.org/search/zip?query=stationary+bike
+2019-06-07 23:00:01,654 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-07 23:00:01,756 "GET /search/zip?query=stationary+bike HTTP/1.1" 403 117
+2019-06-07 23:00:01,759 issued request: stationary+bike
+2019-06-07 23:00:01,760 403
+2019-06-07 23:00:01,760 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-07 23:00:01,761 end searching for: exercise bike
+2019-06-07 23:00:01,761 finished searching
+2019-06-07 23:00:01,762 saved last run data
+2019-06-08 00:00:02,003 ====================entered main===================
+2019-06-08 00:00:02,004 loaded json
+2019-06-08 00:00:02,004 executing search: exercise bike
+2019-06-08 00:00:02,004 processed search terms
+2019-06-08 00:00:02,004 running search for: exercise+bike
+2019-06-08 00:00:02,004 https://baltimore.craigslist.org/search/zip?query=exercise+bike
+2019-06-08 00:00:02,007 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-08 00:00:02,156 "GET /search/zip?query=exercise+bike HTTP/1.1" 403 117
+2019-06-08 00:00:02,165 issued request: exercise+bike
+2019-06-08 00:00:02,165 403
+2019-06-08 00:00:02,181 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-08 00:00:02,182 running search for: bicycle
+2019-06-08 00:00:02,182 https://baltimore.craigslist.org/search/zip?query=bicycle
+2019-06-08 00:00:02,183 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-08 00:00:02,327 "GET /search/zip?query=bicycle HTTP/1.1" 403 117
+2019-06-08 00:00:02,334 issued request: bicycle
+2019-06-08 00:00:02,335 403
+2019-06-08 00:00:02,335 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-08 00:00:02,337 running search for: stationary+bike
+2019-06-08 00:00:02,337 https://baltimore.craigslist.org/search/zip?query=stationary+bike
+2019-06-08 00:00:02,338 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-08 00:00:02,473 "GET /search/zip?query=stationary+bike HTTP/1.1" 403 117
+2019-06-08 00:00:02,476 issued request: stationary+bike
+2019-06-08 00:00:02,477 403
+2019-06-08 00:00:02,477 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-08 00:00:02,478 end searching for: exercise bike
+2019-06-08 00:00:02,478 finished searching
+2019-06-08 00:00:02,479 saved last run data
+2019-06-08 01:00:01,725 ====================entered main===================
+2019-06-08 01:00:01,726 loaded json
+2019-06-08 01:00:01,726 executing search: exercise bike
+2019-06-08 01:00:01,726 processed search terms
+2019-06-08 01:00:01,726 running search for: exercise+bike
+2019-06-08 01:00:01,726 https://baltimore.craigslist.org/search/zip?query=exercise+bike
+2019-06-08 01:00:01,729 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-08 01:00:01,862 "GET /search/zip?query=exercise+bike HTTP/1.1" 403 117
+2019-06-08 01:00:01,869 issued request: exercise+bike
+2019-06-08 01:00:01,870 403
+2019-06-08 01:00:01,882 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-08 01:00:01,883 running search for: bicycle
+2019-06-08 01:00:01,883 https://baltimore.craigslist.org/search/zip?query=bicycle
+2019-06-08 01:00:01,884 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-08 01:00:02,022 "GET /search/zip?query=bicycle HTTP/1.1" 403 117
+2019-06-08 01:00:02,025 issued request: bicycle
+2019-06-08 01:00:02,025 403
+2019-06-08 01:00:02,026 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-08 01:00:02,026 running search for: stationary+bike
+2019-06-08 01:00:02,027 https://baltimore.craigslist.org/search/zip?query=stationary+bike
+2019-06-08 01:00:02,028 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-08 01:00:02,179 "GET /search/zip?query=stationary+bike HTTP/1.1" 403 117
+2019-06-08 01:00:02,184 issued request: stationary+bike
+2019-06-08 01:00:02,186 403
+2019-06-08 01:00:02,186 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-08 01:00:02,188 end searching for: exercise bike
+2019-06-08 01:00:02,188 finished searching
+2019-06-08 01:00:02,189 saved last run data
+2019-06-08 02:00:01,440 ====================entered main===================
+2019-06-08 02:00:01,440 loaded json
+2019-06-08 02:00:01,440 executing search: exercise bike
+2019-06-08 02:00:01,440 processed search terms
+2019-06-08 02:00:01,440 running search for: exercise+bike
+2019-06-08 02:00:01,440 https://baltimore.craigslist.org/search/zip?query=exercise+bike
+2019-06-08 02:00:01,444 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-08 02:00:01,593 "GET /search/zip?query=exercise+bike HTTP/1.1" 403 117
+2019-06-08 02:00:01,599 issued request: exercise+bike
+2019-06-08 02:00:01,599 403
+2019-06-08 02:00:01,616 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-08 02:00:01,617 running search for: bicycle
+2019-06-08 02:00:01,617 https://baltimore.craigslist.org/search/zip?query=bicycle
+2019-06-08 02:00:01,618 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-08 02:00:01,736 "GET /search/zip?query=bicycle HTTP/1.1" 403 117
+2019-06-08 02:00:01,739 issued request: bicycle
+2019-06-08 02:00:01,740 403
+2019-06-08 02:00:01,740 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-08 02:00:01,741 running search for: stationary+bike
+2019-06-08 02:00:01,741 https://baltimore.craigslist.org/search/zip?query=stationary+bike
+2019-06-08 02:00:01,743 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-08 02:00:01,855 "GET /search/zip?query=stationary+bike HTTP/1.1" 403 117
+2019-06-08 02:00:01,861 issued request: stationary+bike
+2019-06-08 02:00:01,862 403
+2019-06-08 02:00:01,862 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-08 02:00:01,863 end searching for: exercise bike
+2019-06-08 02:00:01,863 finished searching
+2019-06-08 02:00:01,863 saved last run data
+2019-06-08 03:00:02,119 ====================entered main===================
+2019-06-08 03:00:02,119 loaded json
+2019-06-08 03:00:02,119 executing search: exercise bike
+2019-06-08 03:00:02,120 processed search terms
+2019-06-08 03:00:02,120 running search for: exercise+bike
+2019-06-08 03:00:02,120 https://baltimore.craigslist.org/search/zip?query=exercise+bike
+2019-06-08 03:00:02,123 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-08 03:00:02,257 "GET /search/zip?query=exercise+bike HTTP/1.1" 403 117
+2019-06-08 03:00:02,260 issued request: exercise+bike
+2019-06-08 03:00:02,261 403
+2019-06-08 03:00:02,276 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-08 03:00:02,277 running search for: bicycle
+2019-06-08 03:00:02,277 https://baltimore.craigslist.org/search/zip?query=bicycle
+2019-06-08 03:00:02,278 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-08 03:00:02,393 "GET /search/zip?query=bicycle HTTP/1.1" 403 117
+2019-06-08 03:00:02,400 issued request: bicycle
+2019-06-08 03:00:02,401 403
+2019-06-08 03:00:02,401 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-08 03:00:02,402 running search for: stationary+bike
+2019-06-08 03:00:02,402 https://baltimore.craigslist.org/search/zip?query=stationary+bike
+2019-06-08 03:00:02,403 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-08 03:00:02,520 "GET /search/zip?query=stationary+bike HTTP/1.1" 403 117
+2019-06-08 03:00:02,526 issued request: stationary+bike
+2019-06-08 03:00:02,526 403
+2019-06-08 03:00:02,527 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-08 03:00:02,528 end searching for: exercise bike
+2019-06-08 03:00:02,528 finished searching
+2019-06-08 03:00:02,528 saved last run data
+2019-06-08 04:00:01,766 ====================entered main===================
+2019-06-08 04:00:01,766 loaded json
+2019-06-08 04:00:01,766 executing search: exercise bike
+2019-06-08 04:00:01,766 processed search terms
+2019-06-08 04:00:01,766 running search for: exercise+bike
+2019-06-08 04:00:01,766 https://baltimore.craigslist.org/search/zip?query=exercise+bike
+2019-06-08 04:00:01,770 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-08 04:00:01,905 "GET /search/zip?query=exercise+bike HTTP/1.1" 403 117
+2019-06-08 04:00:01,912 issued request: exercise+bike
+2019-06-08 04:00:01,913 403
+2019-06-08 04:00:01,929 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-08 04:00:01,929 running search for: bicycle
+2019-06-08 04:00:01,929 https://baltimore.craigslist.org/search/zip?query=bicycle
+2019-06-08 04:00:01,930 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-08 04:00:02,035 "GET /search/zip?query=bicycle HTTP/1.1" 403 117
+2019-06-08 04:00:02,042 issued request: bicycle
+2019-06-08 04:00:02,042 403
+2019-06-08 04:00:02,042 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-08 04:00:02,043 running search for: stationary+bike
+2019-06-08 04:00:02,043 https://baltimore.craigslist.org/search/zip?query=stationary+bike
+2019-06-08 04:00:02,044 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-08 04:00:02,146 "GET /search/zip?query=stationary+bike HTTP/1.1" 403 117
+2019-06-08 04:00:02,153 issued request: stationary+bike
+2019-06-08 04:00:02,154 403
+2019-06-08 04:00:02,154 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-08 04:00:02,155 end searching for: exercise bike
+2019-06-08 04:00:02,155 finished searching
+2019-06-08 04:00:02,155 saved last run data
+2019-06-08 05:00:01,407 ====================entered main===================
+2019-06-08 05:00:01,407 loaded json
+2019-06-08 05:00:01,407 executing search: exercise bike
+2019-06-08 05:00:01,407 processed search terms
+2019-06-08 05:00:01,407 running search for: exercise+bike
+2019-06-08 05:00:01,408 https://baltimore.craigslist.org/search/zip?query=exercise+bike
+2019-06-08 05:00:01,411 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-08 05:00:01,556 "GET /search/zip?query=exercise+bike HTTP/1.1" 403 117
+2019-06-08 05:00:01,566 issued request: exercise+bike
+2019-06-08 05:00:01,568 403
+2019-06-08 05:00:01,584 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-08 05:00:01,585 running search for: bicycle
+2019-06-08 05:00:01,585 https://baltimore.craigslist.org/search/zip?query=bicycle
+2019-06-08 05:00:01,586 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-08 05:00:01,689 "GET /search/zip?query=bicycle HTTP/1.1" 403 117
+2019-06-08 05:00:01,695 issued request: bicycle
+2019-06-08 05:00:01,697 403
+2019-06-08 05:00:01,697 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-08 05:00:01,698 running search for: stationary+bike
+2019-06-08 05:00:01,698 https://baltimore.craigslist.org/search/zip?query=stationary+bike
+2019-06-08 05:00:01,699 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-08 05:00:01,804 "GET /search/zip?query=stationary+bike HTTP/1.1" 403 117
+2019-06-08 05:00:01,810 issued request: stationary+bike
+2019-06-08 05:00:01,812 403
+2019-06-08 05:00:01,812 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-08 05:00:01,814 end searching for: exercise bike
+2019-06-08 05:00:01,814 finished searching
+2019-06-08 05:00:01,814 saved last run data
+2019-06-08 06:00:02,053 ====================entered main===================
+2019-06-08 06:00:02,054 loaded json
+2019-06-08 06:00:02,054 executing search: exercise bike
+2019-06-08 06:00:02,054 processed search terms
+2019-06-08 06:00:02,054 running search for: exercise+bike
+2019-06-08 06:00:02,054 https://baltimore.craigslist.org/search/zip?query=exercise+bike
+2019-06-08 06:00:02,057 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-08 06:00:02,196 "GET /search/zip?query=exercise+bike HTTP/1.1" 403 117
+2019-06-08 06:00:02,199 issued request: exercise+bike
+2019-06-08 06:00:02,200 403
+2019-06-08 06:00:02,215 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-08 06:00:02,216 running search for: bicycle
+2019-06-08 06:00:02,216 https://baltimore.craigslist.org/search/zip?query=bicycle
+2019-06-08 06:00:02,217 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-08 06:00:02,326 "GET /search/zip?query=bicycle HTTP/1.1" 403 117
+2019-06-08 06:00:02,329 issued request: bicycle
+2019-06-08 06:00:02,329 403
+2019-06-08 06:00:02,330 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-08 06:00:02,330 running search for: stationary+bike
+2019-06-08 06:00:02,330 https://baltimore.craigslist.org/search/zip?query=stationary+bike
+2019-06-08 06:00:02,332 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-08 06:00:02,444 "GET /search/zip?query=stationary+bike HTTP/1.1" 403 117
+2019-06-08 06:00:02,446 issued request: stationary+bike
+2019-06-08 06:00:02,447 403
+2019-06-08 06:00:02,447 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-08 06:00:02,448 end searching for: exercise bike
+2019-06-08 06:00:02,448 finished searching
+2019-06-08 06:00:02,448 saved last run data
+2019-06-08 07:00:01,711 ====================entered main===================
+2019-06-08 07:00:01,711 loaded json
+2019-06-08 07:00:01,711 executing search: exercise bike
+2019-06-08 07:00:01,711 processed search terms
+2019-06-08 07:00:01,711 running search for: exercise+bike
+2019-06-08 07:00:01,711 https://baltimore.craigslist.org/search/zip?query=exercise+bike
+2019-06-08 07:00:01,715 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-08 07:00:01,849 "GET /search/zip?query=exercise+bike HTTP/1.1" 403 117
+2019-06-08 07:00:01,852 issued request: exercise+bike
+2019-06-08 07:00:01,853 403
+2019-06-08 07:00:01,870 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-08 07:00:01,871 running search for: bicycle
+2019-06-08 07:00:01,871 https://baltimore.craigslist.org/search/zip?query=bicycle
+2019-06-08 07:00:01,872 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-08 07:00:01,975 "GET /search/zip?query=bicycle HTTP/1.1" 403 117
+2019-06-08 07:00:01,982 issued request: bicycle
+2019-06-08 07:00:01,982 403
+2019-06-08 07:00:01,983 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-08 07:00:01,985 running search for: stationary+bike
+2019-06-08 07:00:01,985 https://baltimore.craigslist.org/search/zip?query=stationary+bike
+2019-06-08 07:00:01,986 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-08 07:00:02,094 "GET /search/zip?query=stationary+bike HTTP/1.1" 403 117
+2019-06-08 07:00:02,099 issued request: stationary+bike
+2019-06-08 07:00:02,100 403
+2019-06-08 07:00:02,100 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-08 07:00:02,101 end searching for: exercise bike
+2019-06-08 07:00:02,101 finished searching
+2019-06-08 07:00:02,101 saved last run data
+2019-06-08 08:00:01,413 ====================entered main===================
+2019-06-08 08:00:01,413 loaded json
+2019-06-08 08:00:01,413 executing search: exercise bike
+2019-06-08 08:00:01,413 processed search terms
+2019-06-08 08:00:01,413 running search for: exercise+bike
+2019-06-08 08:00:01,413 https://baltimore.craigslist.org/search/zip?query=exercise+bike
+2019-06-08 08:00:01,417 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-08 08:00:01,552 "GET /search/zip?query=exercise+bike HTTP/1.1" 403 117
+2019-06-08 08:00:01,556 issued request: exercise+bike
+2019-06-08 08:00:01,556 403
+2019-06-08 08:00:01,571 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-08 08:00:01,572 running search for: bicycle
+2019-06-08 08:00:01,572 https://baltimore.craigslist.org/search/zip?query=bicycle
+2019-06-08 08:00:01,573 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-08 08:00:01,682 "GET /search/zip?query=bicycle HTTP/1.1" 403 117
+2019-06-08 08:00:01,684 issued request: bicycle
+2019-06-08 08:00:01,685 403
+2019-06-08 08:00:01,685 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-08 08:00:01,686 running search for: stationary+bike
+2019-06-08 08:00:01,686 https://baltimore.craigslist.org/search/zip?query=stationary+bike
+2019-06-08 08:00:01,687 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-08 08:00:01,795 "GET /search/zip?query=stationary+bike HTTP/1.1" 403 117
+2019-06-08 08:00:01,798 issued request: stationary+bike
+2019-06-08 08:00:01,799 403
+2019-06-08 08:00:01,799 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-08 08:00:01,800 end searching for: exercise bike
+2019-06-08 08:00:01,800 finished searching
+2019-06-08 08:00:01,801 saved last run data
+2019-06-08 09:00:02,048 ====================entered main===================
+2019-06-08 09:00:02,048 loaded json
+2019-06-08 09:00:02,048 executing search: exercise bike
+2019-06-08 09:00:02,049 processed search terms
+2019-06-08 09:00:02,049 running search for: exercise+bike
+2019-06-08 09:00:02,049 https://baltimore.craigslist.org/search/zip?query=exercise+bike
+2019-06-08 09:00:02,052 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-08 09:00:02,204 "GET /search/zip?query=exercise+bike HTTP/1.1" 403 117
+2019-06-08 09:00:02,210 issued request: exercise+bike
+2019-06-08 09:00:02,211 403
+2019-06-08 09:00:02,227 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-08 09:00:02,228 running search for: bicycle
+2019-06-08 09:00:02,228 https://baltimore.craigslist.org/search/zip?query=bicycle
+2019-06-08 09:00:02,229 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-08 09:00:02,342 "GET /search/zip?query=bicycle HTTP/1.1" 403 117
+2019-06-08 09:00:02,349 issued request: bicycle
+2019-06-08 09:00:02,350 403
+2019-06-08 09:00:02,350 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-08 09:00:02,351 running search for: stationary+bike
+2019-06-08 09:00:02,351 https://baltimore.craigslist.org/search/zip?query=stationary+bike
+2019-06-08 09:00:02,352 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-08 09:00:02,463 "GET /search/zip?query=stationary+bike HTTP/1.1" 403 117
+2019-06-08 09:00:02,470 issued request: stationary+bike
+2019-06-08 09:00:02,470 403
+2019-06-08 09:00:02,470 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-08 09:00:02,471 end searching for: exercise bike
+2019-06-08 09:00:02,471 finished searching
+2019-06-08 09:00:02,471 saved last run data
+2019-06-08 10:00:01,717 ====================entered main===================
+2019-06-08 10:00:01,717 loaded json
+2019-06-08 10:00:01,717 executing search: exercise bike
+2019-06-08 10:00:01,717 processed search terms
+2019-06-08 10:00:01,717 running search for: exercise+bike
+2019-06-08 10:00:01,717 https://baltimore.craigslist.org/search/zip?query=exercise+bike
+2019-06-08 10:00:01,721 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-08 10:00:01,859 "GET /search/zip?query=exercise+bike HTTP/1.1" 403 117
+2019-06-08 10:00:01,862 issued request: exercise+bike
+2019-06-08 10:00:01,862 403
+2019-06-08 10:00:01,877 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-08 10:00:01,877 running search for: bicycle
+2019-06-08 10:00:01,877 https://baltimore.craigslist.org/search/zip?query=bicycle
+2019-06-08 10:00:01,878 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-08 10:00:01,992 "GET /search/zip?query=bicycle HTTP/1.1" 403 117
+2019-06-08 10:00:01,994 issued request: bicycle
+2019-06-08 10:00:01,995 403
+2019-06-08 10:00:01,995 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-08 10:00:01,996 running search for: stationary+bike
+2019-06-08 10:00:01,996 https://baltimore.craigslist.org/search/zip?query=stationary+bike
+2019-06-08 10:00:01,997 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-08 10:00:02,137 "GET /search/zip?query=stationary+bike HTTP/1.1" 403 117
+2019-06-08 10:00:02,142 issued request: stationary+bike
+2019-06-08 10:00:02,143 403
+2019-06-08 10:00:02,143 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-08 10:00:02,144 end searching for: exercise bike
+2019-06-08 10:00:02,144 finished searching
+2019-06-08 10:00:02,144 saved last run data
+2019-06-08 11:00:01,392 ====================entered main===================
+2019-06-08 11:00:01,392 loaded json
+2019-06-08 11:00:01,392 executing search: exercise bike
+2019-06-08 11:00:01,392 processed search terms
+2019-06-08 11:00:01,392 running search for: exercise+bike
+2019-06-08 11:00:01,392 https://baltimore.craigslist.org/search/zip?query=exercise+bike
+2019-06-08 11:00:01,396 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-08 11:00:01,549 "GET /search/zip?query=exercise+bike HTTP/1.1" 403 117
+2019-06-08 11:00:01,559 issued request: exercise+bike
+2019-06-08 11:00:01,559 403
+2019-06-08 11:00:01,576 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-08 11:00:01,577 running search for: bicycle
+2019-06-08 11:00:01,577 https://baltimore.craigslist.org/search/zip?query=bicycle
+2019-06-08 11:00:01,579 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-08 11:00:01,703 "GET /search/zip?query=bicycle HTTP/1.1" 403 117
+2019-06-08 11:00:01,706 issued request: bicycle
+2019-06-08 11:00:01,707 403
+2019-06-08 11:00:01,707 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-08 11:00:01,708 running search for: stationary+bike
+2019-06-08 11:00:01,708 https://baltimore.craigslist.org/search/zip?query=stationary+bike
+2019-06-08 11:00:01,709 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-08 11:00:01,832 "GET /search/zip?query=stationary+bike HTTP/1.1" 403 117
+2019-06-08 11:00:01,835 issued request: stationary+bike
+2019-06-08 11:00:01,836 403
+2019-06-08 11:00:01,836 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-08 11:00:01,837 end searching for: exercise bike
+2019-06-08 11:00:01,837 finished searching
+2019-06-08 11:00:01,837 saved last run data
+2019-06-08 12:00:02,085 ====================entered main===================
+2019-06-08 12:00:02,085 loaded json
+2019-06-08 12:00:02,085 executing search: exercise bike
+2019-06-08 12:00:02,085 processed search terms
+2019-06-08 12:00:02,085 running search for: exercise+bike
+2019-06-08 12:00:02,085 https://baltimore.craigslist.org/search/zip?query=exercise+bike
+2019-06-08 12:00:02,089 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-08 12:00:02,229 "GET /search/zip?query=exercise+bike HTTP/1.1" 403 117
+2019-06-08 12:00:02,232 issued request: exercise+bike
+2019-06-08 12:00:02,233 403
+2019-06-08 12:00:02,248 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-08 12:00:02,249 running search for: bicycle
+2019-06-08 12:00:02,249 https://baltimore.craigslist.org/search/zip?query=bicycle
+2019-06-08 12:00:02,250 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-08 12:00:02,363 "GET /search/zip?query=bicycle HTTP/1.1" 403 117
+2019-06-08 12:00:02,367 issued request: bicycle
+2019-06-08 12:00:02,367 403
+2019-06-08 12:00:02,367 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-08 12:00:02,368 running search for: stationary+bike
+2019-06-08 12:00:02,368 https://baltimore.craigslist.org/search/zip?query=stationary+bike
+2019-06-08 12:00:02,370 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-08 12:00:02,492 "GET /search/zip?query=stationary+bike HTTP/1.1" 403 117
+2019-06-08 12:00:02,495 issued request: stationary+bike
+2019-06-08 12:00:02,496 403
+2019-06-08 12:00:02,496 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-08 12:00:02,497 end searching for: exercise bike
+2019-06-08 12:00:02,497 finished searching
+2019-06-08 12:00:02,497 saved last run data
+2019-06-08 13:00:01,743 ====================entered main===================
+2019-06-08 13:00:01,743 loaded json
+2019-06-08 13:00:01,743 executing search: exercise bike
+2019-06-08 13:00:01,743 processed search terms
+2019-06-08 13:00:01,743 running search for: exercise+bike
+2019-06-08 13:00:01,744 https://baltimore.craigslist.org/search/zip?query=exercise+bike
+2019-06-08 13:00:01,747 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-08 13:00:01,872 "GET /search/zip?query=exercise+bike HTTP/1.1" 403 117
+2019-06-08 13:00:01,882 issued request: exercise+bike
+2019-06-08 13:00:01,883 403
+2019-06-08 13:00:01,900 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-08 13:00:01,901 running search for: bicycle
+2019-06-08 13:00:01,901 https://baltimore.craigslist.org/search/zip?query=bicycle
+2019-06-08 13:00:01,902 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-08 13:00:02,004 "GET /search/zip?query=bicycle HTTP/1.1" 403 117
+2019-06-08 13:00:02,008 issued request: bicycle
+2019-06-08 13:00:02,008 403
+2019-06-08 13:00:02,008 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-08 13:00:02,009 running search for: stationary+bike
+2019-06-08 13:00:02,009 https://baltimore.craigslist.org/search/zip?query=stationary+bike
+2019-06-08 13:00:02,011 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-08 13:00:02,108 "GET /search/zip?query=stationary+bike HTTP/1.1" 403 117
+2019-06-08 13:00:02,111 issued request: stationary+bike
+2019-06-08 13:00:02,112 403
+2019-06-08 13:00:02,112 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-08 13:00:02,112 end searching for: exercise bike
+2019-06-08 13:00:02,113 finished searching
+2019-06-08 13:00:02,113 saved last run data
+2019-06-08 14:00:01,360 ====================entered main===================
+2019-06-08 14:00:01,360 loaded json
+2019-06-08 14:00:01,360 executing search: exercise bike
+2019-06-08 14:00:01,360 processed search terms
+2019-06-08 14:00:01,360 running search for: exercise+bike
+2019-06-08 14:00:01,360 https://baltimore.craigslist.org/search/zip?query=exercise+bike
+2019-06-08 14:00:01,364 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-08 14:00:01,528 "GET /search/zip?query=exercise+bike HTTP/1.1" 403 117
+2019-06-08 14:00:01,538 issued request: exercise+bike
+2019-06-08 14:00:01,538 403
+2019-06-08 14:00:01,554 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-08 14:00:01,555 running search for: bicycle
+2019-06-08 14:00:01,555 https://baltimore.craigslist.org/search/zip?query=bicycle
+2019-06-08 14:00:01,556 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-08 14:00:01,667 "GET /search/zip?query=bicycle HTTP/1.1" 403 117
+2019-06-08 14:00:01,673 issued request: bicycle
+2019-06-08 14:00:01,674 403
+2019-06-08 14:00:01,675 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-08 14:00:01,677 running search for: stationary+bike
+2019-06-08 14:00:01,677 https://baltimore.craigslist.org/search/zip?query=stationary+bike
+2019-06-08 14:00:01,678 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-08 14:00:01,810 "GET /search/zip?query=stationary+bike HTTP/1.1" 403 117
+2019-06-08 14:00:01,812 issued request: stationary+bike
+2019-06-08 14:00:01,813 403
+2019-06-08 14:00:01,813 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-08 14:00:01,814 end searching for: exercise bike
+2019-06-08 14:00:01,814 finished searching
+2019-06-08 14:00:01,814 saved last run data
+2019-06-08 15:00:02,061 ====================entered main===================
+2019-06-08 15:00:02,061 loaded json
+2019-06-08 15:00:02,062 executing search: exercise bike
+2019-06-08 15:00:02,062 processed search terms
+2019-06-08 15:00:02,062 running search for: exercise+bike
+2019-06-08 15:00:02,062 https://baltimore.craigslist.org/search/zip?query=exercise+bike
+2019-06-08 15:00:02,065 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-08 15:00:02,195 "GET /search/zip?query=exercise+bike HTTP/1.1" 403 117
+2019-06-08 15:00:02,197 issued request: exercise+bike
+2019-06-08 15:00:02,197 403
+2019-06-08 15:00:02,210 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-08 15:00:02,211 running search for: bicycle
+2019-06-08 15:00:02,211 https://baltimore.craigslist.org/search/zip?query=bicycle
+2019-06-08 15:00:02,212 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-08 15:00:02,347 "GET /search/zip?query=bicycle HTTP/1.1" 403 117
+2019-06-08 15:00:02,353 issued request: bicycle
+2019-06-08 15:00:02,354 403
+2019-06-08 15:00:02,354 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-08 15:00:02,355 running search for: stationary+bike
+2019-06-08 15:00:02,355 https://baltimore.craigslist.org/search/zip?query=stationary+bike
+2019-06-08 15:00:02,356 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-08 15:00:02,500 "GET /search/zip?query=stationary+bike HTTP/1.1" 403 117
+2019-06-08 15:00:02,508 issued request: stationary+bike
+2019-06-08 15:00:02,509 403
+2019-06-08 15:00:02,509 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-08 15:00:02,510 end searching for: exercise bike
+2019-06-08 15:00:02,510 finished searching
+2019-06-08 15:00:02,511 saved last run data
+2019-06-08 16:00:01,762 ====================entered main===================
+2019-06-08 16:00:01,762 loaded json
+2019-06-08 16:00:01,762 executing search: exercise bike
+2019-06-08 16:00:01,763 processed search terms
+2019-06-08 16:00:01,763 running search for: exercise+bike
+2019-06-08 16:00:01,763 https://baltimore.craigslist.org/search/zip?query=exercise+bike
+2019-06-08 16:00:01,766 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-08 16:00:01,936 "GET /search/zip?query=exercise+bike HTTP/1.1" 403 117
+2019-06-08 16:00:01,938 issued request: exercise+bike
+2019-06-08 16:00:01,938 403
+2019-06-08 16:00:01,951 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-08 16:00:01,952 running search for: bicycle
+2019-06-08 16:00:01,952 https://baltimore.craigslist.org/search/zip?query=bicycle
+2019-06-08 16:00:01,953 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-08 16:00:02,085 "GET /search/zip?query=bicycle HTTP/1.1" 403 117
+2019-06-08 16:00:02,092 issued request: bicycle
+2019-06-08 16:00:02,092 403
+2019-06-08 16:00:02,093 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-08 16:00:02,094 running search for: stationary+bike
+2019-06-08 16:00:02,094 https://baltimore.craigslist.org/search/zip?query=stationary+bike
+2019-06-08 16:00:02,095 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-08 16:00:02,206 "GET /search/zip?query=stationary+bike HTTP/1.1" 403 117
+2019-06-08 16:00:02,209 issued request: stationary+bike
+2019-06-08 16:00:02,209 403
+2019-06-08 16:00:02,210 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-08 16:00:02,211 end searching for: exercise bike
+2019-06-08 16:00:02,211 finished searching
+2019-06-08 16:00:02,211 saved last run data
+2019-06-08 17:00:01,454 ====================entered main===================
+2019-06-08 17:00:01,454 loaded json
+2019-06-08 17:00:01,454 executing search: exercise bike
+2019-06-08 17:00:01,455 processed search terms
+2019-06-08 17:00:01,455 running search for: exercise+bike
+2019-06-08 17:00:01,455 https://baltimore.craigslist.org/search/zip?query=exercise+bike
+2019-06-08 17:00:01,458 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-08 17:00:01,602 "GET /search/zip?query=exercise+bike HTTP/1.1" 403 117
+2019-06-08 17:00:01,604 issued request: exercise+bike
+2019-06-08 17:00:01,605 403
+2019-06-08 17:00:01,617 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-08 17:00:01,618 running search for: bicycle
+2019-06-08 17:00:01,618 https://baltimore.craigslist.org/search/zip?query=bicycle
+2019-06-08 17:00:01,619 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-08 17:00:01,741 "GET /search/zip?query=bicycle HTTP/1.1" 403 117
+2019-06-08 17:00:01,747 issued request: bicycle
+2019-06-08 17:00:01,749 403
+2019-06-08 17:00:01,749 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-08 17:00:01,750 running search for: stationary+bike
+2019-06-08 17:00:01,750 https://baltimore.craigslist.org/search/zip?query=stationary+bike
+2019-06-08 17:00:01,751 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-08 17:00:01,864 "GET /search/zip?query=stationary+bike HTTP/1.1" 403 117
+2019-06-08 17:00:01,873 issued request: stationary+bike
+2019-06-08 17:00:01,873 403
+2019-06-08 17:00:01,874 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-08 17:00:01,874 end searching for: exercise bike
+2019-06-08 17:00:01,874 finished searching
+2019-06-08 17:00:01,875 saved last run data
+2019-06-08 18:00:02,116 ====================entered main===================
+2019-06-08 18:00:02,116 loaded json
+2019-06-08 18:00:02,116 executing search: exercise bike
+2019-06-08 18:00:02,116 processed search terms
+2019-06-08 18:00:02,116 running search for: exercise+bike
+2019-06-08 18:00:02,116 https://baltimore.craigslist.org/search/zip?query=exercise+bike
+2019-06-08 18:00:02,120 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-08 18:00:02,263 "GET /search/zip?query=exercise+bike HTTP/1.1" 403 117
+2019-06-08 18:00:02,271 issued request: exercise+bike
+2019-06-08 18:00:02,272 403
+2019-06-08 18:00:02,288 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-08 18:00:02,288 running search for: bicycle
+2019-06-08 18:00:02,289 https://baltimore.craigslist.org/search/zip?query=bicycle
+2019-06-08 18:00:02,290 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-08 18:00:02,437 "GET /search/zip?query=bicycle HTTP/1.1" 403 117
+2019-06-08 18:00:02,446 issued request: bicycle
+2019-06-08 18:00:02,446 403
+2019-06-08 18:00:02,446 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-08 18:00:02,447 running search for: stationary+bike
+2019-06-08 18:00:02,447 https://baltimore.craigslist.org/search/zip?query=stationary+bike
+2019-06-08 18:00:02,449 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-08 18:00:02,576 "GET /search/zip?query=stationary+bike HTTP/1.1" 403 117
+2019-06-08 18:00:02,579 issued request: stationary+bike
+2019-06-08 18:00:02,580 403
+2019-06-08 18:00:02,580 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-08 18:00:02,581 end searching for: exercise bike
+2019-06-08 18:00:02,581 finished searching
+2019-06-08 18:00:02,581 saved last run data
+2019-06-08 19:00:01,828 ====================entered main===================
+2019-06-08 19:00:01,828 loaded json
+2019-06-08 19:00:01,828 executing search: exercise bike
+2019-06-08 19:00:01,828 processed search terms
+2019-06-08 19:00:01,829 running search for: exercise+bike
+2019-06-08 19:00:01,829 https://baltimore.craigslist.org/search/zip?query=exercise+bike
+2019-06-08 19:00:01,832 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-08 20:00:01,340 ====================entered main===================
+2019-06-08 20:00:01,341 loaded json
+2019-06-08 20:00:01,341 executing search: exercise bike
+2019-06-08 20:00:01,341 processed search terms
+2019-06-08 20:00:01,341 running search for: exercise+bike
+2019-06-08 20:00:01,341 https://baltimore.craigslist.org/search/zip?query=exercise+bike
+2019-06-08 20:00:01,344 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-08 20:00:01,496 "GET /search/zip?query=exercise+bike HTTP/1.1" 403 117
+2019-06-08 20:00:01,505 issued request: exercise+bike
+2019-06-08 20:00:01,505 403
+2019-06-08 20:00:01,521 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-08 20:00:01,522 running search for: bicycle
+2019-06-08 20:00:01,522 https://baltimore.craigslist.org/search/zip?query=bicycle
+2019-06-08 20:00:01,523 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-08 20:00:01,639 "GET /search/zip?query=bicycle HTTP/1.1" 403 117
+2019-06-08 20:00:01,647 issued request: bicycle
+2019-06-08 20:00:01,647 403
+2019-06-08 20:00:01,647 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-08 20:00:01,648 running search for: stationary+bike
+2019-06-08 20:00:01,648 https://baltimore.craigslist.org/search/zip?query=stationary+bike
+2019-06-08 20:00:01,649 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-08 20:00:01,768 "GET /search/zip?query=stationary+bike HTTP/1.1" 403 117
+2019-06-08 20:00:01,777 issued request: stationary+bike
+2019-06-08 20:00:01,778 403
+2019-06-08 20:00:01,778 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-08 20:00:01,779 end searching for: exercise bike
+2019-06-08 20:00:01,779 finished searching
+2019-06-08 20:00:01,780 saved last run data
+2019-06-08 21:00:02,020 ====================entered main===================
+2019-06-08 21:00:02,020 loaded json
+2019-06-08 21:00:02,020 executing search: exercise bike
+2019-06-08 21:00:02,020 processed search terms
+2019-06-08 21:00:02,020 running search for: exercise+bike
+2019-06-08 21:00:02,020 https://baltimore.craigslist.org/search/zip?query=exercise+bike
+2019-06-08 21:00:02,024 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-08 21:00:02,135 "GET /search/zip?query=exercise+bike HTTP/1.1" 403 117
+2019-06-08 21:00:02,139 issued request: exercise+bike
+2019-06-08 21:00:02,140 403
+2019-06-08 21:00:02,154 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-08 21:00:02,155 running search for: bicycle
+2019-06-08 21:00:02,155 https://baltimore.craigslist.org/search/zip?query=bicycle
+2019-06-08 21:00:02,156 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-08 21:00:02,249 "GET /search/zip?query=bicycle HTTP/1.1" 403 117
+2019-06-08 21:00:02,255 issued request: bicycle
+2019-06-08 21:00:02,255 403
+2019-06-08 21:00:02,255 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-08 21:00:02,256 running search for: stationary+bike
+2019-06-08 21:00:02,256 https://baltimore.craigslist.org/search/zip?query=stationary+bike
+2019-06-08 21:00:02,257 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-08 21:00:02,345 "GET /search/zip?query=stationary+bike HTTP/1.1" 403 117
+2019-06-08 21:00:02,351 issued request: stationary+bike
+2019-06-08 21:00:02,352 403
+2019-06-08 21:00:02,353 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-08 21:00:02,354 end searching for: exercise bike
+2019-06-08 21:00:02,354 finished searching
+2019-06-08 21:00:02,354 saved last run data
+2019-06-08 22:00:01,591 ====================entered main===================
+2019-06-08 22:00:01,591 loaded json
+2019-06-08 22:00:01,591 executing search: exercise bike
+2019-06-08 22:00:01,591 processed search terms
+2019-06-08 22:00:01,591 running search for: exercise+bike
+2019-06-08 22:00:01,591 https://baltimore.craigslist.org/search/zip?query=exercise+bike
+2019-06-08 22:00:01,595 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-08 22:00:01,738 "GET /search/zip?query=exercise+bike HTTP/1.1" 403 117
+2019-06-08 22:00:01,743 issued request: exercise+bike
+2019-06-08 22:00:01,744 403
+2019-06-08 22:00:01,761 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-08 22:00:01,762 running search for: bicycle
+2019-06-08 22:00:01,762 https://baltimore.craigslist.org/search/zip?query=bicycle
+2019-06-08 22:00:01,763 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-08 22:00:01,869 "GET /search/zip?query=bicycle HTTP/1.1" 403 117
+2019-06-08 22:00:01,874 issued request: bicycle
+2019-06-08 22:00:01,875 403
+2019-06-08 22:00:01,875 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-08 22:00:01,876 running search for: stationary+bike
+2019-06-08 22:00:01,876 https://baltimore.craigslist.org/search/zip?query=stationary+bike
+2019-06-08 22:00:01,877 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-08 22:00:01,971 "GET /search/zip?query=stationary+bike HTTP/1.1" 403 117
+2019-06-08 22:00:01,975 issued request: stationary+bike
+2019-06-08 22:00:01,976 403
+2019-06-08 22:00:01,976 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-08 22:00:01,977 end searching for: exercise bike
+2019-06-08 22:00:01,977 finished searching
+2019-06-08 22:00:01,978 saved last run data
+2019-06-08 23:00:01,228 ====================entered main===================
+2019-06-08 23:00:01,228 loaded json
+2019-06-08 23:00:01,229 executing search: exercise bike
+2019-06-08 23:00:01,229 processed search terms
+2019-06-08 23:00:01,229 running search for: exercise+bike
+2019-06-08 23:00:01,229 https://baltimore.craigslist.org/search/zip?query=exercise+bike
+2019-06-08 23:00:01,232 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-08 23:00:01,404 "GET /search/zip?query=exercise+bike HTTP/1.1" 403 117
+2019-06-08 23:00:01,413 issued request: exercise+bike
+2019-06-08 23:00:01,414 403
+2019-06-08 23:00:01,429 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-08 23:00:01,430 running search for: bicycle
+2019-06-08 23:00:01,430 https://baltimore.craigslist.org/search/zip?query=bicycle
+2019-06-08 23:00:01,431 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-08 23:00:01,554 "GET /search/zip?query=bicycle HTTP/1.1" 403 117
+2019-06-08 23:00:01,561 issued request: bicycle
+2019-06-08 23:00:01,562 403
+2019-06-08 23:00:01,562 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-08 23:00:01,564 running search for: stationary+bike
+2019-06-08 23:00:01,564 https://baltimore.craigslist.org/search/zip?query=stationary+bike
+2019-06-08 23:00:01,566 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-08 23:00:01,671 "GET /search/zip?query=stationary+bike HTTP/1.1" 403 117
+2019-06-08 23:00:01,677 issued request: stationary+bike
+2019-06-08 23:00:01,678 403
+2019-06-08 23:00:01,678 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-08 23:00:01,679 end searching for: exercise bike
+2019-06-08 23:00:01,679 finished searching
+2019-06-08 23:00:01,679 saved last run data
+2019-06-09 00:00:01,916 ====================entered main===================
+2019-06-09 00:00:01,916 loaded json
+2019-06-09 00:00:01,916 executing search: exercise bike
+2019-06-09 00:00:01,916 processed search terms
+2019-06-09 00:00:01,916 running search for: exercise+bike
+2019-06-09 00:00:01,916 https://baltimore.craigslist.org/search/zip?query=exercise+bike
+2019-06-09 00:00:01,920 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-09 00:00:02,052 "GET /search/zip?query=exercise+bike HTTP/1.1" 403 117
+2019-06-09 00:00:02,058 issued request: exercise+bike
+2019-06-09 00:00:02,058 403
+2019-06-09 00:00:02,074 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-09 00:00:02,074 running search for: bicycle
+2019-06-09 00:00:02,075 https://baltimore.craigslist.org/search/zip?query=bicycle
+2019-06-09 00:00:02,076 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-09 00:00:02,183 "GET /search/zip?query=bicycle HTTP/1.1" 403 117
+2019-06-09 00:00:02,190 issued request: bicycle
+2019-06-09 00:00:02,191 403
+2019-06-09 00:00:02,191 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-09 00:00:02,193 running search for: stationary+bike
+2019-06-09 00:00:02,193 https://baltimore.craigslist.org/search/zip?query=stationary+bike
+2019-06-09 00:00:02,194 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-09 00:00:02,325 "GET /search/zip?query=stationary+bike HTTP/1.1" 403 117
+2019-06-09 00:00:02,332 issued request: stationary+bike
+2019-06-09 00:00:02,333 403
+2019-06-09 00:00:02,333 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-09 00:00:02,334 end searching for: exercise bike
+2019-06-09 00:00:02,334 finished searching
+2019-06-09 00:00:02,334 saved last run data
+2019-06-09 01:00:01,578 ====================entered main===================
+2019-06-09 01:00:01,578 loaded json
+2019-06-09 01:00:01,578 executing search: exercise bike
+2019-06-09 01:00:01,578 processed search terms
+2019-06-09 01:00:01,578 running search for: exercise+bike
+2019-06-09 01:00:01,578 https://baltimore.craigslist.org/search/zip?query=exercise+bike
+2019-06-09 01:00:01,582 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-09 01:00:01,715 "GET /search/zip?query=exercise+bike HTTP/1.1" 403 117
+2019-06-09 01:00:01,719 issued request: exercise+bike
+2019-06-09 01:00:01,720 403
+2019-06-09 01:00:01,736 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-09 01:00:01,737 running search for: bicycle
+2019-06-09 01:00:01,737 https://baltimore.craigslist.org/search/zip?query=bicycle
+2019-06-09 01:00:01,738 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-09 01:00:01,878 "GET /search/zip?query=bicycle HTTP/1.1" 403 117
+2019-06-09 01:00:01,882 issued request: bicycle
+2019-06-09 01:00:01,882 403
+2019-06-09 01:00:01,882 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-09 01:00:01,883 running search for: stationary+bike
+2019-06-09 01:00:01,883 https://baltimore.craigslist.org/search/zip?query=stationary+bike
+2019-06-09 01:00:01,884 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-09 01:00:02,009 "GET /search/zip?query=stationary+bike HTTP/1.1" 403 117
+2019-06-09 01:00:02,019 issued request: stationary+bike
+2019-06-09 01:00:02,021 403
+2019-06-09 01:00:02,021 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-09 01:00:02,023 end searching for: exercise bike
+2019-06-09 01:00:02,023 finished searching
+2019-06-09 01:00:02,024 saved last run data
+2019-06-09 02:00:01,286 ====================entered main===================
+2019-06-09 02:00:01,286 loaded json
+2019-06-09 02:00:01,286 executing search: exercise bike
+2019-06-09 02:00:01,286 processed search terms
+2019-06-09 02:00:01,287 running search for: exercise+bike
+2019-06-09 02:00:01,287 https://baltimore.craigslist.org/search/zip?query=exercise+bike
+2019-06-09 02:00:01,292 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-09 02:00:01,450 "GET /search/zip?query=exercise+bike HTTP/1.1" 403 117
+2019-06-09 02:00:01,459 issued request: exercise+bike
+2019-06-09 02:00:01,460 403
+2019-06-09 02:00:01,478 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-09 02:00:01,479 running search for: bicycle
+2019-06-09 02:00:01,479 https://baltimore.craigslist.org/search/zip?query=bicycle
+2019-06-09 02:00:01,480 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-09 02:00:01,590 "GET /search/zip?query=bicycle HTTP/1.1" 403 117
+2019-06-09 02:00:01,599 issued request: bicycle
+2019-06-09 02:00:01,600 403
+2019-06-09 02:00:01,600 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-09 02:00:01,601 running search for: stationary+bike
+2019-06-09 02:00:01,601 https://baltimore.craigslist.org/search/zip?query=stationary+bike
+2019-06-09 02:00:01,602 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-09 02:00:01,712 "GET /search/zip?query=stationary+bike HTTP/1.1" 403 117
+2019-06-09 02:00:01,721 issued request: stationary+bike
+2019-06-09 02:00:01,722 403
+2019-06-09 02:00:01,722 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-09 02:00:01,723 end searching for: exercise bike
+2019-06-09 02:00:01,723 finished searching
+2019-06-09 02:00:01,723 saved last run data
+2019-06-09 03:00:01,978 ====================entered main===================
+2019-06-09 03:00:01,978 loaded json
+2019-06-09 03:00:01,978 executing search: exercise bike
+2019-06-09 03:00:01,978 processed search terms
+2019-06-09 03:00:01,978 running search for: exercise+bike
+2019-06-09 03:00:01,979 https://baltimore.craigslist.org/search/zip?query=exercise+bike
+2019-06-09 03:00:01,982 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-09 03:00:02,121 "GET /search/zip?query=exercise+bike HTTP/1.1" 403 117
+2019-06-09 03:00:02,124 issued request: exercise+bike
+2019-06-09 03:00:02,124 403
+2019-06-09 03:00:02,141 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-09 03:00:02,142 running search for: bicycle
+2019-06-09 03:00:02,143 https://baltimore.craigslist.org/search/zip?query=bicycle
+2019-06-09 03:00:02,144 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-09 03:00:02,255 "GET /search/zip?query=bicycle HTTP/1.1" 403 117
+2019-06-09 03:00:02,258 issued request: bicycle
+2019-06-09 03:00:02,258 403
+2019-06-09 03:00:02,258 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-09 03:00:02,259 running search for: stationary+bike
+2019-06-09 03:00:02,259 https://baltimore.craigslist.org/search/zip?query=stationary+bike
+2019-06-09 03:00:02,260 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-09 03:00:02,364 "GET /search/zip?query=stationary+bike HTTP/1.1" 403 117
+2019-06-09 03:00:02,368 issued request: stationary+bike
+2019-06-09 03:00:02,368 403
+2019-06-09 03:00:02,369 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-09 03:00:02,370 end searching for: exercise bike
+2019-06-09 03:00:02,370 finished searching
+2019-06-09 03:00:02,370 saved last run data
+2019-06-09 04:00:01,636 ====================entered main===================
+2019-06-09 04:00:01,637 loaded json
+2019-06-09 04:00:01,637 executing search: exercise bike
+2019-06-09 04:00:01,637 processed search terms
+2019-06-09 04:00:01,637 running search for: exercise+bike
+2019-06-09 04:00:01,637 https://baltimore.craigslist.org/search/zip?query=exercise+bike
+2019-06-09 04:00:01,640 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-09 04:00:01,776 "GET /search/zip?query=exercise+bike HTTP/1.1" 403 117
+2019-06-09 04:00:01,783 issued request: exercise+bike
+2019-06-09 04:00:01,784 403
+2019-06-09 04:00:01,798 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-09 04:00:01,798 running search for: bicycle
+2019-06-09 04:00:01,799 https://baltimore.craigslist.org/search/zip?query=bicycle
+2019-06-09 04:00:01,799 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-09 04:00:01,921 "GET /search/zip?query=bicycle HTTP/1.1" 403 117
+2019-06-09 04:00:01,928 issued request: bicycle
+2019-06-09 04:00:01,928 403
+2019-06-09 04:00:01,928 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-09 04:00:01,930 running search for: stationary+bike
+2019-06-09 04:00:01,930 https://baltimore.craigslist.org/search/zip?query=stationary+bike
+2019-06-09 04:00:01,931 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-09 04:00:02,037 "GET /search/zip?query=stationary+bike HTTP/1.1" 403 117
+2019-06-09 04:00:02,043 issued request: stationary+bike
+2019-06-09 04:00:02,044 403
+2019-06-09 04:00:02,045 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-09 04:00:02,046 end searching for: exercise bike
+2019-06-09 04:00:02,046 finished searching
+2019-06-09 04:00:02,046 saved last run data
+2019-06-09 05:00:01,303 ====================entered main===================
+2019-06-09 05:00:01,304 loaded json
+2019-06-09 05:00:01,304 executing search: exercise bike
+2019-06-09 05:00:01,304 processed search terms
+2019-06-09 05:00:01,304 running search for: exercise+bike
+2019-06-09 05:00:01,304 https://baltimore.craigslist.org/search/zip?query=exercise+bike
+2019-06-09 05:00:01,307 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-09 05:00:01,450 "GET /search/zip?query=exercise+bike HTTP/1.1" 403 117
+2019-06-09 05:00:01,455 issued request: exercise+bike
+2019-06-09 05:00:01,456 403
+2019-06-09 05:00:01,472 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-09 05:00:01,473 running search for: bicycle
+2019-06-09 05:00:01,473 https://baltimore.craigslist.org/search/zip?query=bicycle
+2019-06-09 05:00:01,474 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-09 05:00:01,589 "GET /search/zip?query=bicycle HTTP/1.1" 403 117
+2019-06-09 05:00:01,596 issued request: bicycle
+2019-06-09 05:00:01,596 403
+2019-06-09 05:00:01,597 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-09 05:00:01,598 running search for: stationary+bike
+2019-06-09 05:00:01,598 https://baltimore.craigslist.org/search/zip?query=stationary+bike
+2019-06-09 05:00:01,599 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-09 05:00:01,706 "GET /search/zip?query=stationary+bike HTTP/1.1" 403 117
+2019-06-09 05:00:01,712 issued request: stationary+bike
+2019-06-09 05:00:01,713 403
+2019-06-09 05:00:01,714 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-09 05:00:01,715 end searching for: exercise bike
+2019-06-09 05:00:01,716 finished searching
+2019-06-09 05:00:01,717 saved last run data
+2019-06-09 06:00:01,974 ====================entered main===================
+2019-06-09 06:00:01,974 loaded json
+2019-06-09 06:00:01,974 executing search: exercise bike
+2019-06-09 06:00:01,974 processed search terms
+2019-06-09 06:00:01,974 running search for: exercise+bike
+2019-06-09 06:00:01,974 https://baltimore.craigslist.org/search/zip?query=exercise+bike
+2019-06-09 06:00:01,978 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-09 06:00:02,109 "GET /search/zip?query=exercise+bike HTTP/1.1" 403 117
+2019-06-09 06:00:02,115 issued request: exercise+bike
+2019-06-09 06:00:02,116 403
+2019-06-09 06:00:02,130 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-09 06:00:02,130 running search for: bicycle
+2019-06-09 06:00:02,130 https://baltimore.craigslist.org/search/zip?query=bicycle
+2019-06-09 06:00:02,131 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-09 06:00:02,253 "GET /search/zip?query=bicycle HTTP/1.1" 403 117
+2019-06-09 06:00:02,259 issued request: bicycle
+2019-06-09 06:00:02,261 403
+2019-06-09 06:00:02,261 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-09 06:00:02,262 running search for: stationary+bike
+2019-06-09 06:00:02,262 https://baltimore.craigslist.org/search/zip?query=stationary+bike
+2019-06-09 06:00:02,263 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-09 06:00:02,371 "GET /search/zip?query=stationary+bike HTTP/1.1" 403 117
+2019-06-09 06:00:02,377 issued request: stationary+bike
+2019-06-09 06:00:02,378 403
+2019-06-09 06:00:02,379 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-09 06:00:02,380 end searching for: exercise bike
+2019-06-09 06:00:02,381 finished searching
+2019-06-09 06:00:02,382 saved last run data
+2019-06-09 07:00:01,666 ====================entered main===================
+2019-06-09 07:00:01,666 loaded json
+2019-06-09 07:00:01,666 executing search: exercise bike
+2019-06-09 07:00:01,666 processed search terms
+2019-06-09 07:00:01,667 running search for: exercise+bike
+2019-06-09 07:00:01,667 https://baltimore.craigslist.org/search/zip?query=exercise+bike
+2019-06-09 07:00:01,670 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-09 07:00:01,846 "GET /search/zip?query=exercise+bike HTTP/1.1" 403 117
+2019-06-09 07:00:01,852 issued request: exercise+bike
+2019-06-09 07:00:01,854 403
+2019-06-09 07:00:01,869 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-09 07:00:01,870 running search for: bicycle
+2019-06-09 07:00:01,870 https://baltimore.craigslist.org/search/zip?query=bicycle
+2019-06-09 07:00:01,871 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-09 07:00:02,007 "GET /search/zip?query=bicycle HTTP/1.1" 403 117
+2019-06-09 07:00:02,013 issued request: bicycle
+2019-06-09 07:00:02,015 403
+2019-06-09 07:00:02,015 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-09 07:00:02,017 running search for: stationary+bike
+2019-06-09 07:00:02,017 https://baltimore.craigslist.org/search/zip?query=stationary+bike
+2019-06-09 07:00:02,018 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-09 07:00:02,157 "GET /search/zip?query=stationary+bike HTTP/1.1" 403 117
+2019-06-09 07:00:02,168 issued request: stationary+bike
+2019-06-09 07:00:02,170 403
+2019-06-09 07:00:02,170 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-09 07:00:02,170 end searching for: exercise bike
+2019-06-09 07:00:02,171 finished searching
+2019-06-09 07:00:02,171 saved last run data
+2019-06-09 08:00:01,481 ====================entered main===================
+2019-06-09 08:00:01,481 loaded json
+2019-06-09 08:00:01,481 executing search: exercise bike
+2019-06-09 08:00:01,481 processed search terms
+2019-06-09 08:00:01,481 running search for: exercise+bike
+2019-06-09 08:00:01,481 https://baltimore.craigslist.org/search/zip?query=exercise+bike
+2019-06-09 08:00:01,485 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-09 08:00:01,601 "GET /search/zip?query=exercise+bike HTTP/1.1" 403 117
+2019-06-09 08:00:01,606 issued request: exercise+bike
+2019-06-09 08:00:01,607 403
+2019-06-09 08:00:01,621 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-09 08:00:01,622 running search for: bicycle
+2019-06-09 08:00:01,622 https://baltimore.craigslist.org/search/zip?query=bicycle
+2019-06-09 08:00:01,623 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-09 08:00:01,732 "GET /search/zip?query=bicycle HTTP/1.1" 403 117
+2019-06-09 08:00:01,738 issued request: bicycle
+2019-06-09 08:00:01,739 403
+2019-06-09 08:00:01,740 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-09 08:00:01,742 running search for: stationary+bike
+2019-06-09 08:00:01,742 https://baltimore.craigslist.org/search/zip?query=stationary+bike
+2019-06-09 08:00:01,743 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-09 08:00:01,843 "GET /search/zip?query=stationary+bike HTTP/1.1" 403 117
+2019-06-09 08:00:01,849 issued request: stationary+bike
+2019-06-09 08:00:01,850 403
+2019-06-09 08:00:01,851 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-09 08:00:01,852 end searching for: exercise bike
+2019-06-09 08:00:01,853 finished searching
+2019-06-09 08:00:01,854 saved last run data
+2019-06-09 09:00:02,104 ====================entered main===================
+2019-06-09 09:00:02,104 loaded json
+2019-06-09 09:00:02,104 executing search: exercise bike
+2019-06-09 09:00:02,104 processed search terms
+2019-06-09 09:00:02,104 running search for: exercise+bike
+2019-06-09 09:00:02,104 https://baltimore.craigslist.org/search/zip?query=exercise+bike
+2019-06-09 09:00:02,108 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-09 09:00:02,217 "GET /search/zip?query=exercise+bike HTTP/1.1" 403 117
+2019-06-09 09:00:02,224 issued request: exercise+bike
+2019-06-09 09:00:02,225 403
+2019-06-09 09:00:02,238 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-09 09:00:02,239 running search for: bicycle
+2019-06-09 09:00:02,239 https://baltimore.craigslist.org/search/zip?query=bicycle
+2019-06-09 09:00:02,240 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-09 09:00:02,327 "GET /search/zip?query=bicycle HTTP/1.1" 403 117
+2019-06-09 09:00:02,330 issued request: bicycle
+2019-06-09 09:00:02,330 403
+2019-06-09 09:00:02,331 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-09 09:00:02,331 running search for: stationary+bike
+2019-06-09 09:00:02,332 https://baltimore.craigslist.org/search/zip?query=stationary+bike
+2019-06-09 09:00:02,333 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-09 09:00:02,418 "GET /search/zip?query=stationary+bike HTTP/1.1" 403 117
+2019-06-09 09:00:02,424 issued request: stationary+bike
+2019-06-09 09:00:02,426 403
+2019-06-09 09:00:02,426 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-09 09:00:02,428 end searching for: exercise bike
+2019-06-09 09:00:02,428 finished searching
+2019-06-09 09:00:02,429 saved last run data
+2019-06-09 10:00:01,684 ====================entered main===================
+2019-06-09 10:00:01,684 loaded json
+2019-06-09 10:00:01,684 executing search: exercise bike
+2019-06-09 10:00:01,684 processed search terms
+2019-06-09 10:00:01,684 running search for: exercise+bike
+2019-06-09 10:00:01,684 https://baltimore.craigslist.org/search/zip?query=exercise+bike
+2019-06-09 10:00:01,688 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-09 10:00:01,825 "GET /search/zip?query=exercise+bike HTTP/1.1" 403 117
+2019-06-09 10:00:01,831 issued request: exercise+bike
+2019-06-09 10:00:01,833 403
+2019-06-09 10:00:01,846 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-09 10:00:01,847 running search for: bicycle
+2019-06-09 10:00:01,847 https://baltimore.craigslist.org/search/zip?query=bicycle
+2019-06-09 10:00:01,848 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-09 10:00:01,986 "GET /search/zip?query=bicycle HTTP/1.1" 403 117
+2019-06-09 10:00:01,993 issued request: bicycle
+2019-06-09 10:00:01,994 403
+2019-06-09 10:00:01,994 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-09 10:00:01,996 running search for: stationary+bike
+2019-06-09 10:00:01,996 https://baltimore.craigslist.org/search/zip?query=stationary+bike
+2019-06-09 10:00:01,998 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-09 10:00:02,130 "GET /search/zip?query=stationary+bike HTTP/1.1" 403 117
+2019-06-09 10:00:02,135 issued request: stationary+bike
+2019-06-09 10:00:02,137 403
+2019-06-09 10:00:02,137 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-09 10:00:02,138 end searching for: exercise bike
+2019-06-09 10:00:02,138 finished searching
+2019-06-09 10:00:02,138 saved last run data
+2019-06-09 11:00:01,390 ====================entered main===================
+2019-06-09 11:00:01,390 loaded json
+2019-06-09 11:00:01,391 executing search: exercise bike
+2019-06-09 11:00:01,391 processed search terms
+2019-06-09 11:00:01,391 running search for: exercise+bike
+2019-06-09 11:00:01,391 https://baltimore.craigslist.org/search/zip?query=exercise+bike
+2019-06-09 11:00:01,394 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-09 11:00:01,560 "GET /search/zip?query=exercise+bike HTTP/1.1" 403 117
+2019-06-09 11:00:01,562 issued request: exercise+bike
+2019-06-09 11:00:01,562 403
+2019-06-09 11:00:01,578 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-09 11:00:01,578 running search for: bicycle
+2019-06-09 11:00:01,578 https://baltimore.craigslist.org/search/zip?query=bicycle
+2019-06-09 11:00:01,579 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-09 11:00:01,694 "GET /search/zip?query=bicycle HTTP/1.1" 403 117
+2019-06-09 11:00:01,702 issued request: bicycle
+2019-06-09 11:00:01,703 403
+2019-06-09 11:00:01,703 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-09 11:00:01,704 running search for: stationary+bike
+2019-06-09 11:00:01,704 https://baltimore.craigslist.org/search/zip?query=stationary+bike
+2019-06-09 11:00:01,705 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-09 11:00:01,825 "GET /search/zip?query=stationary+bike HTTP/1.1" 403 117
+2019-06-09 11:00:01,835 issued request: stationary+bike
+2019-06-09 11:00:01,835 403
+2019-06-09 11:00:01,836 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-09 11:00:01,836 end searching for: exercise bike
+2019-06-09 11:00:01,837 finished searching
+2019-06-09 11:00:01,837 saved last run data
+2019-06-09 12:00:02,098 ====================entered main===================
+2019-06-09 12:00:02,098 loaded json
+2019-06-09 12:00:02,098 executing search: exercise bike
+2019-06-09 12:00:02,098 processed search terms
+2019-06-09 12:00:02,098 running search for: exercise+bike
+2019-06-09 12:00:02,098 https://baltimore.craigslist.org/search/zip?query=exercise+bike
+2019-06-09 12:00:02,102 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-09 12:00:02,218 "GET /search/zip?query=exercise+bike HTTP/1.1" 403 117
+2019-06-09 12:00:02,220 issued request: exercise+bike
+2019-06-09 12:00:02,221 403
+2019-06-09 12:00:02,233 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-09 12:00:02,234 running search for: bicycle
+2019-06-09 12:00:02,234 https://baltimore.craigslist.org/search/zip?query=bicycle
+2019-06-09 12:00:02,235 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-09 12:00:02,325 "GET /search/zip?query=bicycle HTTP/1.1" 403 117
+2019-06-09 12:00:02,332 issued request: bicycle
+2019-06-09 12:00:02,332 403
+2019-06-09 12:00:02,332 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-09 12:00:02,334 running search for: stationary+bike
+2019-06-09 12:00:02,334 https://baltimore.craigslist.org/search/zip?query=stationary+bike
+2019-06-09 12:00:02,335 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-09 12:00:02,423 "GET /search/zip?query=stationary+bike HTTP/1.1" 403 117
+2019-06-09 12:00:02,429 issued request: stationary+bike
+2019-06-09 12:00:02,430 403
+2019-06-09 12:00:02,431 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-09 12:00:02,433 end searching for: exercise bike
+2019-06-09 12:00:02,433 finished searching
+2019-06-09 12:00:02,434 saved last run data
+2019-06-09 13:00:01,691 ====================entered main===================
+2019-06-09 13:00:01,692 loaded json
+2019-06-09 13:00:01,692 executing search: exercise bike
+2019-06-09 13:00:01,692 processed search terms
+2019-06-09 13:00:01,692 running search for: exercise+bike
+2019-06-09 13:00:01,692 https://baltimore.craigslist.org/search/zip?query=exercise+bike
+2019-06-09 13:00:01,695 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-09 13:00:01,853 "GET /search/zip?query=exercise+bike HTTP/1.1" 403 117
+2019-06-09 13:00:01,855 issued request: exercise+bike
+2019-06-09 13:00:01,856 403
+2019-06-09 13:00:01,868 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-09 13:00:01,869 running search for: bicycle
+2019-06-09 13:00:01,869 https://baltimore.craigslist.org/search/zip?query=bicycle
+2019-06-09 13:00:01,870 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-09 13:00:01,993 "GET /search/zip?query=bicycle HTTP/1.1" 403 117
+2019-06-09 13:00:02,005 issued request: bicycle
+2019-06-09 13:00:02,006 403
+2019-06-09 13:00:02,006 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-09 13:00:02,007 running search for: stationary+bike
+2019-06-09 13:00:02,007 https://baltimore.craigslist.org/search/zip?query=stationary+bike
+2019-06-09 13:00:02,008 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-09 13:00:02,124 "GET /search/zip?query=stationary+bike HTTP/1.1" 403 117
+2019-06-09 13:00:02,130 issued request: stationary+bike
+2019-06-09 13:00:02,131 403
+2019-06-09 13:00:02,132 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-09 13:00:02,134 end searching for: exercise bike
+2019-06-09 13:00:02,134 finished searching
+2019-06-09 13:00:02,134 saved last run data
+2019-06-09 14:00:01,386 ====================entered main===================
+2019-06-09 14:00:01,386 loaded json
+2019-06-09 14:00:01,386 executing search: exercise bike
+2019-06-09 14:00:01,386 processed search terms
+2019-06-09 14:00:01,386 running search for: exercise+bike
+2019-06-09 14:00:01,386 https://baltimore.craigslist.org/search/zip?query=exercise+bike
+2019-06-09 14:00:01,390 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-09 14:00:01,522 "GET /search/zip?query=exercise+bike HTTP/1.1" 403 117
+2019-06-09 14:00:01,524 issued request: exercise+bike
+2019-06-09 14:00:01,524 403
+2019-06-09 14:00:01,537 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-09 14:00:01,538 running search for: bicycle
+2019-06-09 14:00:01,538 https://baltimore.craigslist.org/search/zip?query=bicycle
+2019-06-09 14:00:01,539 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-09 14:00:01,654 "GET /search/zip?query=bicycle HTTP/1.1" 403 117
+2019-06-09 14:00:01,657 issued request: bicycle
+2019-06-09 14:00:01,658 403
+2019-06-09 14:00:01,658 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-09 14:00:01,659 running search for: stationary+bike
+2019-06-09 14:00:01,659 https://baltimore.craigslist.org/search/zip?query=stationary+bike
+2019-06-09 14:00:01,660 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-09 14:00:01,775 "GET /search/zip?query=stationary+bike HTTP/1.1" 403 117
+2019-06-09 14:00:01,781 issued request: stationary+bike
+2019-06-09 14:00:01,782 403
+2019-06-09 14:00:01,782 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-09 14:00:01,784 end searching for: exercise bike
+2019-06-09 14:00:01,784 finished searching
+2019-06-09 14:00:01,785 saved last run data
+2019-06-09 14:07:45,083 ====================entered main===================
+2019-06-09 14:07:45,084 loaded json
+2019-06-09 14:07:45,084 executing search: exercise bike
+2019-06-09 14:07:45,084 processed search terms
+2019-06-09 14:07:45,084 running search for: exercise+bike
+2019-06-09 14:07:45,084 https://baltimore.craigslist.org/search/zip?query=exercise+bike
+2019-06-09 14:07:45,086 Starting new HTTPS connection (1): baltimore.craigslist.org:443
+2019-06-09 14:07:45,338 https://baltimore.craigslist.org:443 "GET /search/zip?query=exercise+bike HTTP/1.1" 200 11040
+2019-06-09 14:07:45,377 issued request: exercise+bike
+2019-06-09 14:07:45,378 200
+2019-06-09 14:07:45,433 running search for: bicycle
+2019-06-09 14:07:45,434 https://baltimore.craigslist.org/search/zip?query=bicycle
+2019-06-09 14:07:45,435 Starting new HTTPS connection (1): baltimore.craigslist.org:443
+2019-06-09 14:07:45,665 https://baltimore.craigslist.org:443 "GET /search/zip?query=bicycle HTTP/1.1" 200 11217
+2019-06-09 14:07:45,696 issued request: bicycle
+2019-06-09 14:07:45,697 200
+2019-06-09 14:07:45,752 running search for: stationary+bike
+2019-06-09 14:07:45,752 https://baltimore.craigslist.org/search/zip?query=stationary+bike
+2019-06-09 14:07:45,753 Starting new HTTPS connection (1): baltimore.craigslist.org:443
+2019-06-09 14:07:45,996 https://baltimore.craigslist.org:443 "GET /search/zip?query=stationary+bike HTTP/1.1" 200 10455
+2019-06-09 14:07:46,034 issued request: stationary+bike
+2019-06-09 14:07:46,035 200
+2019-06-09 14:07:46,081 end searching for: exercise bike
+2019-06-09 14:07:46,081 finished searching
+2019-06-09 14:07:46,082 saved last run data
+2019-06-09 15:00:02,036 ====================entered main===================
+2019-06-09 15:00:02,037 loaded json
+2019-06-09 15:00:02,037 executing search: exercise bike
+2019-06-09 15:00:02,037 processed search terms
+2019-06-09 15:00:02,037 running search for: exercise+bike
+2019-06-09 15:00:02,037 https://baltimore.craigslist.org/search/zip?query=exercise+bike
+2019-06-09 15:00:02,040 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-09 15:00:02,226 "GET /search/zip?query=exercise+bike HTTP/1.1" 403 117
+2019-06-09 15:00:02,233 issued request: exercise+bike
+2019-06-09 15:00:02,234 403
+2019-06-09 15:00:02,249 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-09 15:00:02,250 running search for: bicycle
+2019-06-09 15:00:02,250 https://baltimore.craigslist.org/search/zip?query=bicycle
+2019-06-09 15:00:02,251 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-09 15:00:02,367 "GET /search/zip?query=bicycle HTTP/1.1" 403 117
+2019-06-09 15:00:02,373 issued request: bicycle
+2019-06-09 15:00:02,375 403
+2019-06-09 15:00:02,375 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-09 15:00:02,377 running search for: stationary+bike
+2019-06-09 15:00:02,377 https://baltimore.craigslist.org/search/zip?query=stationary+bike
+2019-06-09 15:00:02,378 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-09 15:00:02,494 "GET /search/zip?query=stationary+bike HTTP/1.1" 403 117
+2019-06-09 15:00:02,500 issued request: stationary+bike
+2019-06-09 15:00:02,501 403
+2019-06-09 15:00:02,501 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-09 15:00:02,502 end searching for: exercise bike
+2019-06-09 15:00:02,502 finished searching
+2019-06-09 15:00:02,503 saved last run data
+2019-06-09 16:00:01,744 ====================entered main===================
+2019-06-09 16:00:01,744 loaded json
+2019-06-09 16:00:01,744 executing search: exercise bike
+2019-06-09 16:00:01,744 processed search terms
+2019-06-09 16:00:01,744 running search for: exercise+bike
+2019-06-09 16:00:01,744 https://baltimore.craigslist.org/search/zip?query=exercise+bike
+2019-06-09 16:00:01,748 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-09 16:00:01,901 "GET /search/zip?query=exercise+bike HTTP/1.1" 403 117
+2019-06-09 16:00:01,908 issued request: exercise+bike
+2019-06-09 16:00:01,909 403
+2019-06-09 16:00:01,925 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-09 16:00:01,925 running search for: bicycle
+2019-06-09 16:00:01,925 https://baltimore.craigslist.org/search/zip?query=bicycle
+2019-06-09 16:00:01,926 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-09 16:00:02,070 "GET /search/zip?query=bicycle HTTP/1.1" 403 117
+2019-06-09 16:00:02,080 issued request: bicycle
+2019-06-09 16:00:02,082 403
+2019-06-09 16:00:02,082 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-09 16:00:02,083 running search for: stationary+bike
+2019-06-09 16:00:02,083 https://baltimore.craigslist.org/search/zip?query=stationary+bike
+2019-06-09 16:00:02,084 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-09 16:00:02,202 "GET /search/zip?query=stationary+bike HTTP/1.1" 403 117
+2019-06-09 16:00:02,207 issued request: stationary+bike
+2019-06-09 16:00:02,207 403
+2019-06-09 16:00:02,208 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-09 16:00:02,208 end searching for: exercise bike
+2019-06-09 16:00:02,209 finished searching
+2019-06-09 16:00:02,209 saved last run data
+2019-06-09 17:00:01,448 ====================entered main===================
+2019-06-09 17:00:01,448 loaded json
+2019-06-09 17:00:01,449 executing search: exercise bike
+2019-06-09 17:00:01,449 processed search terms
+2019-06-09 17:00:01,449 running search for: exercise+bike
+2019-06-09 17:00:01,449 https://baltimore.craigslist.org/search/zip?query=exercise+bike
+2019-06-09 17:00:01,452 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-09 17:00:01,590 "GET /search/zip?query=exercise+bike HTTP/1.1" 403 117
+2019-06-09 17:00:01,593 issued request: exercise+bike
+2019-06-09 17:00:01,593 403
+2019-06-09 17:00:01,609 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-09 17:00:01,610 running search for: bicycle
+2019-06-09 17:00:01,610 https://baltimore.craigslist.org/search/zip?query=bicycle
+2019-06-09 17:00:01,611 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-09 17:00:01,761 "GET /search/zip?query=bicycle HTTP/1.1" 403 117
+2019-06-09 17:00:01,769 issued request: bicycle
+2019-06-09 17:00:01,770 403
+2019-06-09 17:00:01,770 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-09 17:00:01,770 running search for: stationary+bike
+2019-06-09 17:00:01,770 https://baltimore.craigslist.org/search/zip?query=stationary+bike
+2019-06-09 17:00:01,771 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-09 17:00:01,879 "GET /search/zip?query=stationary+bike HTTP/1.1" 403 117
+2019-06-09 17:00:01,883 issued request: stationary+bike
+2019-06-09 17:00:01,883 403
+2019-06-09 17:00:01,883 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-09 17:00:01,884 end searching for: exercise bike
+2019-06-09 17:00:01,884 finished searching
+2019-06-09 17:00:01,885 saved last run data
+2019-06-09 18:00:02,130 ====================entered main===================
+2019-06-09 18:00:02,130 loaded json
+2019-06-09 18:00:02,130 executing search: exercise bike
+2019-06-09 18:00:02,130 processed search terms
+2019-06-09 18:00:02,130 running search for: exercise+bike
+2019-06-09 18:00:02,130 https://baltimore.craigslist.org/search/zip?query=exercise+bike
+2019-06-09 18:00:02,134 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-09 18:00:02,289 "GET /search/zip?query=exercise+bike HTTP/1.1" 403 117
+2019-06-09 18:00:02,300 issued request: exercise+bike
+2019-06-09 18:00:02,301 403
+2019-06-09 18:00:02,318 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-09 18:00:02,319 running search for: bicycle
+2019-06-09 18:00:02,319 https://baltimore.craigslist.org/search/zip?query=bicycle
+2019-06-09 18:00:02,320 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-09 18:00:02,465 "GET /search/zip?query=bicycle HTTP/1.1" 403 117
+2019-06-09 18:00:02,471 issued request: bicycle
+2019-06-09 18:00:02,471 403
+2019-06-09 18:00:02,471 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-09 18:00:02,472 running search for: stationary+bike
+2019-06-09 18:00:02,472 https://baltimore.craigslist.org/search/zip?query=stationary+bike
+2019-06-09 18:00:02,473 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-09 18:00:02,611 "GET /search/zip?query=stationary+bike HTTP/1.1" 403 117
+2019-06-09 18:00:02,619 issued request: stationary+bike
+2019-06-09 18:00:02,621 403
+2019-06-09 18:00:02,621 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-09 18:00:02,622 end searching for: exercise bike
+2019-06-09 18:00:02,622 finished searching
+2019-06-09 18:00:02,623 saved last run data
+2019-06-09 19:00:01,863 ====================entered main===================
+2019-06-09 19:00:01,864 loaded json
+2019-06-09 19:00:01,864 executing search: exercise bike
+2019-06-09 19:00:01,864 processed search terms
+2019-06-09 19:00:01,864 running search for: exercise+bike
+2019-06-09 19:00:01,864 https://baltimore.craigslist.org/search/zip?query=exercise+bike
+2019-06-09 19:00:01,867 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-09 19:00:01,987 "GET /search/zip?query=exercise+bike HTTP/1.1" 403 117
+2019-06-09 19:00:01,990 issued request: exercise+bike
+2019-06-09 19:00:01,991 403
+2019-06-09 19:00:02,006 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-09 19:00:02,007 running search for: bicycle
+2019-06-09 19:00:02,007 https://baltimore.craigslist.org/search/zip?query=bicycle
+2019-06-09 19:00:02,008 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-09 19:00:02,094 "GET /search/zip?query=bicycle HTTP/1.1" 403 117
+2019-06-09 19:00:02,097 issued request: bicycle
+2019-06-09 19:00:02,098 403
+2019-06-09 19:00:02,098 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-09 19:00:02,099 running search for: stationary+bike
+2019-06-09 19:00:02,099 https://baltimore.craigslist.org/search/zip?query=stationary+bike
+2019-06-09 19:00:02,101 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-09 19:00:02,180 "GET /search/zip?query=stationary+bike HTTP/1.1" 403 117
+2019-06-09 19:00:02,186 issued request: stationary+bike
+2019-06-09 19:00:02,187 403
+2019-06-09 19:00:02,188 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-09 19:00:02,190 end searching for: exercise bike
+2019-06-09 19:00:02,190 finished searching
+2019-06-09 19:00:02,190 saved last run data
+2019-06-09 20:00:01,442 ====================entered main===================
+2019-06-09 20:00:01,442 loaded json
+2019-06-09 20:00:01,442 executing search: exercise bike
+2019-06-09 20:00:01,442 processed search terms
+2019-06-09 20:00:01,442 running search for: exercise+bike
+2019-06-09 20:00:01,442 https://baltimore.craigslist.org/search/zip?query=exercise+bike
+2019-06-09 20:00:01,446 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-09 20:00:01,596 "GET /search/zip?query=exercise+bike HTTP/1.1" 403 117
+2019-06-09 20:00:01,600 issued request: exercise+bike
+2019-06-09 20:00:01,600 403
+2019-06-09 20:00:01,616 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-09 20:00:01,617 running search for: bicycle
+2019-06-09 20:00:01,617 https://baltimore.craigslist.org/search/zip?query=bicycle
+2019-06-09 20:00:01,618 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-09 20:00:01,728 "GET /search/zip?query=bicycle HTTP/1.1" 403 117
+2019-06-09 20:00:01,731 issued request: bicycle
+2019-06-09 20:00:01,732 403
+2019-06-09 20:00:01,732 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-09 20:00:01,733 running search for: stationary+bike
+2019-06-09 20:00:01,733 https://baltimore.craigslist.org/search/zip?query=stationary+bike
+2019-06-09 20:00:01,734 Starting new HTTPS connection (1): baltimore.craigslist.org
+2019-06-09 20:00:01,874 "GET /search/zip?query=stationary+bike HTTP/1.1" 403 117
+2019-06-09 20:00:01,880 issued request: stationary+bike
+2019-06-09 20:00:01,882 403
+2019-06-09 20:00:01,882 This IP has been automatically blocked.
+If you have questions, please email: blocks-b1557416310559721@craigslist.org
+
+2019-06-09 20:00:01,882 end searching for: exercise bike
+2019-06-09 20:00:01,883 finished searching
+2019-06-09 20:00:01,883 saved last run data
+2019-06-09 20:20:10,841 ====================entered main===================
+2019-06-09 20:20:10,842 loaded json
+2019-06-09 20:20:10,842 executing search: exercise bike
+2019-06-09 20:20:10,842 processed search terms
+2019-06-09 20:20:10,842 running search for: exercise+bike
+2019-06-09 20:20:10,842 https://baltimore.craigslist.org/search/zip?query=exercise+bike
+2019-06-09 20:20:10,844 Starting new HTTPS connection (1): baltimore.craigslist.org:443
+2019-06-09 20:20:11,101 https://baltimore.craigslist.org:443 "GET /search/zip?query=exercise+bike HTTP/1.1" 200 11034
+2019-06-09 20:20:11,134 issued request: exercise+bike
+2019-06-09 20:20:11,135 200
+2019-06-09 20:20:11,190 running search for: bicycle
+2019-06-09 20:20:11,190 https://baltimore.craigslist.org/search/zip?query=bicycle
+2019-06-09 20:20:11,191 Starting new HTTPS connection (1): baltimore.craigslist.org:443
+2019-06-09 20:20:11,436 https://baltimore.craigslist.org:443 "GET /search/zip?query=bicycle HTTP/1.1" 200 11217
+2019-06-09 20:20:11,476 issued request: bicycle
+2019-06-09 20:20:11,477 200
+2019-06-09 20:20:11,532 running search for: stationary+bike
+2019-06-09 20:20:11,532 https://baltimore.craigslist.org/search/zip?query=stationary+bike
+2019-06-09 20:20:11,533 Starting new HTTPS connection (1): baltimore.craigslist.org:443
+2019-06-09 20:20:11,689 https://baltimore.craigslist.org:443 "GET /search/zip?query=stationary+bike HTTP/1.1" 200 10679
+2019-06-09 20:20:11,709 issued request: stationary+bike
+2019-06-09 20:20:11,710 200
+2019-06-09 20:20:11,758 end searching for: exercise bike
+2019-06-09 20:20:11,758 finished searching
+2019-06-09 20:20:11,758 saved last run data
+2019-06-09 23:34:34,929 ====================entered main===================
+2019-06-09 23:34:34,929 loaded json
+2019-06-09 23:34:34,929 executing search: exercise bike
+2019-06-09 23:34:34,929 processed search terms
+2019-06-09 23:34:34,929 running search for: exercise+bike
+2019-06-09 23:34:34,929 https://baltimore.craigslist.org/search/zip?query=exercise+bike
+2019-06-09 23:34:34,948 Starting new HTTPS connection (1): baltimore.craigslist.org:443
+2019-06-09 23:34:35,260 https://baltimore.craigslist.org:443 "GET /search/zip?query=exercise+bike HTTP/1.1" 200 11034
+2019-06-09 23:34:35,294 issued request: exercise+bike
+2019-06-09 23:34:35,295 200
+2019-06-09 23:34:35,405 running search for: bicycle
+2019-06-09 23:34:35,405 https://baltimore.craigslist.org/search/zip?query=bicycle
+2019-06-09 23:34:35,406 Starting new HTTPS connection (1): baltimore.craigslist.org:443
+2019-06-09 23:34:35,630 https://baltimore.craigslist.org:443 "GET /search/zip?query=bicycle HTTP/1.1" 200 11217
+2019-06-09 23:34:35,670 issued request: bicycle
+2019-06-09 23:34:35,671 200
+2019-06-09 23:34:35,723 running search for: stationary+bike
+2019-06-09 23:34:35,724 https://baltimore.craigslist.org/search/zip?query=stationary+bike
+2019-06-09 23:34:35,725 Starting new HTTPS connection (1): baltimore.craigslist.org:443
+2019-06-09 23:34:35,942 https://baltimore.craigslist.org:443 "GET /search/zip?query=stationary+bike HTTP/1.1" 200 10679
+2019-06-09 23:34:35,970 issued request: stationary+bike
+2019-06-09 23:34:35,971 200
+2019-06-09 23:34:36,017 end searching for: exercise bike
+2019-06-09 23:34:36,018 finished searching
+2019-06-09 23:34:36,018 saved last run data
+2019-06-24 17:02:59,637 ====================entered main===================
+2019-06-24 17:02:59,637 loaded json
+2019-06-24 17:02:59,637 executing search: exercise bike
+2019-06-24 17:02:59,637 processed search terms
+2019-06-24 17:02:59,637 running search for: exercise+bike
+2019-06-24 17:02:59,637 https://baltimore.craigslist.org/search/zip?query=exercise+bike
+2019-06-24 17:02:59,641 Starting new HTTPS connection (1): baltimore.craigslist.org:443
+2019-06-24 17:02:59,870 https://baltimore.craigslist.org:443 "GET /search/zip?query=exercise+bike HTTP/1.1" 200 11222
+2019-06-24 17:02:59,901 issued request: exercise+bike
+2019-06-24 17:02:59,902 200
+2019-06-24 17:02:59,974 running search for: bicycle
+2019-06-24 17:02:59,974 https://baltimore.craigslist.org/search/zip?query=bicycle
+2019-06-24 17:02:59,977 Starting new HTTPS connection (1): baltimore.craigslist.org:443
+2019-06-24 17:03:00,197 https://baltimore.craigslist.org:443 "GET /search/zip?query=bicycle HTTP/1.1" 200 11080
+2019-06-24 17:03:00,230 issued request: bicycle
+2019-06-24 17:03:00,232 200
+2019-06-24 17:03:00,286 running search for: stationary+bike
+2019-06-24 17:03:00,286 https://baltimore.craigslist.org/search/zip?query=stationary+bike
+2019-06-24 17:03:00,288 Starting new HTTPS connection (1): baltimore.craigslist.org:443
+2019-06-24 17:03:00,495 https://baltimore.craigslist.org:443 "GET /search/zip?query=stationary+bike HTTP/1.1" 200 10655
+2019-06-24 17:03:00,515 issued request: stationary+bike
+2019-06-24 17:03:00,516 200
+2019-06-24 17:03:02,678 sent email for: exercise bike
+2019-06-24 17:03:02,678 end searching for: exercise bike
+2019-06-24 17:03:02,679 finished searching
+2019-06-24 17:03:02,679 saved last run data
