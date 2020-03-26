@@ -54,7 +54,10 @@ def execute_search(search_url, search_terms, last_run):
     results = []
     final_results = []
     for res in raw_results:
-        results.append((res.findChild('a').get('href'), res.findChild('time').get("datetime"), res.findChild('a').get_text()))
+        results.append((res.findChild('a').get('href'), 
+                        res.findChild('time').get("datetime"), 
+                        res.findChild('a').get_text())
+                        )
 
     if last_run == 0:
         last_run = time.localtime(time.mktime((1970, 1, 1, 1, 1, 1, 4, 1, 0)))
