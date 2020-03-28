@@ -1,10 +1,10 @@
 Beautiful Soup Notes
 =============================================================
 ## Kinds of objects
-- BeautifulSoup: The top-level object that represents the parsed document as a whole. Usually this is called/instantiated once and the rest of the time you're working with...
-- Tag: Tags are the workhorses of any Beautiful Soup project since virtually every webpage is nothing BUT tags. So searching tags and extracting data from them is a pretty much the entirety of most Beautiful Soup projects.
-- NavigableString: These haven't been terribly useful to me, since they represent regular strings and are functionally almost identical.
-- Other: BS4 also defines a "Comment" class that is a special type of NavigableString, as well as some other classes for more niche tag/data types
+- ```BeautifulSoup```: The top-level object that represents the parsed document as a whole. Usually this is called/instantiated once and the rest of the time you're working with...
+- ```Tag```: Tags are the workhorses of any Beautiful Soup project since virtually every webpage is nothing BUT tags. So searching tags and extracting data from them is a pretty much the entirety of most Beautiful Soup projects.
+- ```NavigableString```: These haven't been terribly useful to me, since they represent regular strings and are functionally almost identical.
+- Other: BS4 also defines a ```Comment``` class that is a special type of ```NavigableString```, as well as some other classes for more niche tag/data types
 
 		
 ## Parsing the document
@@ -12,22 +12,25 @@ BS4 doesn't actually parse the document itself. It uses external parsers to do s
 	
 ## Navigating the tree
 While you can use the .find_all and .select methods to quickly go to exactly what you want, sometimes you might want to iterate through part of a document in a more readily-interpreted way. This is where the functions/generators/attributes of:
-- .contents
-- .children
-- .descendants
-- .string(s)
-- .parent(s)
-- .next_sibling(s)
-- .previous_sibling(s)
-- .next_element(s)
-- .previous_elements(s)
+- ```.contents```
+- ```.children```
+- ```.descendants```
+- ```.string(s)```
+- ```.parent(s)```
+- ```.next_sibling(s)```
+- ```.previous_sibling(s)```
+- ```.next_element(s)```
+- ```.previous_elements(s)```
 
 come in. Check the documentation because different accessors behave differently. For example, the .contents and .children attributes only consider a tag's direct children, not any grandchildren or more. For that, you would need to use the .descendants attribute to get ALL the tags that are children (in some fashion) of the tag you're calling. I haven't had much need for this, but could be useful.
+
+## Getting data out of the tree
+Retrieving data is very simple. Just call the ```.get(attr)``` method on a ```Tag``` object where ```attr``` is a string representing the name of the attribute you wish to retrieve.
 
 ## Searching the tree
 This is the bread and butter of BS4. Learning to quickly search through an html (or xml) document means you can grab the data you're interested in more quickly and get the project over with. To this end, BS4 supports two main ways of searching: using ```.find``` or ```.find_all```, or using ```.select```. The ```.find``` and ```.find_all``` methods allow you to specify a tag name (e.g.: a, body, table, div, etc) and tag attributes in two main ways. 
 
-The first is passing in a dictionary containing the filter criteria (e.g.: ```{"name": "email", "id": "username"}```). This allows you to specify an attribute called "name", because by default, the "name" parameter refers to the tag name, not the attribute "name".
+The first is passing in a dictionary containing the filter criteria (e.g.: ```attrs={"name": "email", "id": "username"}```). This allows you to specify an attribute called "name", because by default, the "name" parameter refers to the tag name, not the attribute "name".
 
 The second way is to pass the parameters in as named arguments that are not part of the named argument list. For example, calling:
 
@@ -36,9 +39,9 @@ The second way is to pass the parameters in as named arguments that are not part
 will return a list of all anchor tags ("a") with a "title" attribute that has a value of "prev". 
 The ```.find_all()``` method is very powerful and can do more than just matching a regular string. It supports a variety of filter types that make it much easier to find data that may not be formatted the same way every time. ```.find_all()``` supports five kinds of filters.
 - a string
-- a regular expression (here there be dragons)
 - a list
-- True
+- ```True```
+- a regular expression (here there be dragons)
 - a function
 
 The string we've been over and is the simplest filter. A list is the next step up in that it matches any tag with a name in the list. So the list:
