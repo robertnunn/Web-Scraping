@@ -42,6 +42,7 @@ def process_info_box(url):
     soup = bs4.BeautifulSoup(item_page.text, 'lxml')
     
     info_box = soup.find('table', class_='infoboxtable')
+    # info_box = soup.find('table', attrs={'class': 'infoboxtable'})
     rows = info_box.find_all('tr')
     row_strings = list()
     info = dict()
