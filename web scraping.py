@@ -4,58 +4,58 @@ web scraping practice using:
     requests
     beautiful soup 4
 
+a[::-1] == reversed list  ([start:end:step])
+
 goal: download all xkcd comics, number and title them appropriately
 """
 
 import requests
 import bs4
-import os, time
+import os
+# import time
 
-os.chdir('./comics')
+# this block of code sets up the folder where we place the images and sets the url we start working with
+# os.chdir('/comics/')
 url_master = 'http://xkcd.com'
 url = 'http://xkcd.com'
 comic = 'xkcd'
-folder = ' '.join([comic, time.strftime('%b-%d-%Y')])
+folder = comic
+# folder = ' '.join([comic, time.strftime('%Y-%m-%b')])
 os.makedirs(folder, exist_ok=True)
 os.chdir('./' + folder)
-comic_name_list = []
-num = 9999
-# print(dir)
-# a[::-1] == reversed list
 
-while not url.endswith('#'):
+
+while not url.endswith('#'):  # ending with an octothorpe ('#') indicates we've hit the very first page
     print('downloading', url)
-    comic_page = requests.get(url)
-    comic_page.raise_for_status()
-    soup = bs4.BeautifulSoup(comic_page.text, 'lxml')
-    try:
-        num = int(os.path.split(url[:-1])[1])
-    except:
-        print("no number detected")
+    # get the page and parse the html using the lxml library
+    comic_page = requests.get(url)  # make the http request
+    comic_page.raise_for_status()  # check the reponse, raises an exception if something went wrong
+    soup = bs4.BeautifulSoup(comic_page.text, 'lxml')  # soupify!
+
+    prev_data = soup.select('a[rel="prev"]')[0]  # get the anchor tag that links to the previous page
+    prev_link = prev_data.get('href')  # get the actual link (sorta)
+    if not url.endswith('.com'):
+        num = os.path.split(url[:-1])[1]  # get the number of the comic from the url by splitting the url after deleting the trailing '/'
+    else:
+        try:
+            num = int(prev_link[1:-1]) + 1  # strip the leading and trailing '/', cast to int, add 1 because this should only run when on the front page
+            num = str(num)  # no matter what, cast num to a string
+        except:
+            # print error number instead
+            num = 'XXXX'
+            print("no number detected")
+    # print(num)
     comic_data = soup.select('#comic img')
     if comic_data != []:
         comic_url = comic_data[0].get('src')
-        comic_name_list.append(os.path.basename(comic_url))
         try:
-            comic_res = requests.get('http:' + comic_url)
-            comic_res.raise_for_status()
+            comic_req = requests.get('https:' + comic_url)
+            comic_req.raise_for_status()
 
-            with open(os.path.basename(comic_url), 'wb') as c:
-                for chunk in comic_res.iter_content(100000):
+            with open(num.zfill(4) + ' ' + os.path.basename(comic_url), 'wb') as c:
+                for chunk in comic_req.iter_content(100000):
                     c.write(chunk)
         except Exception as e:
             print(e)
 
-    prev_data = soup.select('a[rel="prev"]')[0]
-    prev_link = prev_data.get('href')
     url = url_master + prev_link
-
-comic_name_list = comic_name_list[::-1]
-print("renaming...")
-for i in range(len(comic_name_list)):
-    try:
-        src = comic_name_list[i]
-        dst = str(i+1).zfill(4) + ' - ' + src
-        os.rename(src, dst)
-    except Exception as e:
-        print(e)
