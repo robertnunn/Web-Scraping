@@ -48,7 +48,7 @@ The string we've been over and is the simplest filter. A list is the next step u
 
 ```['a', 'b']```
 
-will match any "a" tags or any "b" tags and will return both kinds (if found) in the results. At a similar level of complexity is using "True". This simply tests for the existence of an attribute, and if the tag has such an attribute, it will be returned in the results. For example, calling:
+will match any "a" tags or any "b" tags and will return both kinds (if found) in the results. At a similar level of complexity is using ```True```. This simply tests for the existence of an attribute, and if the tag has such an attribute, it will be returned in the results. For example, calling:
 
 ```tag.find_all("a", "title=True")```
 
