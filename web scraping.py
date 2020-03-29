@@ -45,17 +45,18 @@ while not url.endswith('#'):  # ending with an octothorpe ('#') indicates we've 
             num = 'XXXX'
             print("no number detected")
     # print(num)
-    comic_data = soup.select('#comic img')
-    if comic_data != []:
-        comic_url = comic_data[0].get('src')
+    comic_data = soup.select('#comic img')  # select the img tag that is a direct child of a tag with id=comic
+    if comic_data != []:  # check that we actually got something
+        comic_url = comic_data[0].get('src')  # get the source of the image
         try:
-            comic_req = requests.get('https:' + comic_url)
-            comic_req.raise_for_status()
+            comic_req = requests.get('https:' + comic_url)  # add the https to the source we just got
+            comic_req.raise_for_status()  # check that for errors
 
+            # the comic is already named as the title, now we just stick a 4-digit number at the beginning to make sorting by alpha and time the same result
             with open(num.zfill(4) + ' ' + os.path.basename(comic_url), 'wb') as c:
                 for chunk in comic_req.iter_content(100000):
                     c.write(chunk)
         except Exception as e:
             print(e)
 
-    url = url_master + prev_link
+    url = url_master + prev_link  # build the link to the previous page and follow it
