@@ -52,7 +52,7 @@ while not url.endswith('#'):  # ending with an octothorpe ('#') indicates we've 
             comic_req = requests.get('https:' + comic_url)  # add the https to the source we just got
             comic_req.raise_for_status()  # check that for errors
 
-            # the comic is already named as the title, now we just stick a 4-digit number at the beginning to make sorting by alpha and time the same result
+            # the comic is already named as the title, now we just stick a 4-digit number at the beginning to make sorting by alpha and sorting by time the same result
             with open(num.zfill(4) + ' ' + os.path.basename(comic_url), 'wb') as c:
                 for chunk in comic_req.iter_content(100000):
                     c.write(chunk)

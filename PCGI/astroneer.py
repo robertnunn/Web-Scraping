@@ -1,3 +1,6 @@
+"""
+What's really funny is that I edited the astroneer wiki to: add information, make it easier to scrape, and be more consistent between pages and the admin is so possessive that he undid all my edits and banned me for 3 days. As a result, this script doesn't accurately scrape data from the astroneer wiki.
+"""
 import os
 import sys
 import requests
@@ -115,6 +118,43 @@ def expand_recipe(recipe):
     return r
 
 
+def get_power_data():
+    url = 'https://astroneer.gamepedia.com/Power'
+    power_req = requests.get(url)
+    power_req.raise_for_status()
+    soup = bs4.BeautifulSoup(power_req.text, 'lxml')
+    flow_rate = 'Flow Rate\n'
+    capacity = 'Capacity\n'
+    consumption = 'Consumption Rate\n'
+    prefix = ';'
+    results = dict()
+    tables = soup.find_all('table', limit=3)
+    for table in tables:
+        # print(table.attrs)
+        rows = table.find_all('tr')#, limit=5)
+        header = rows[0]
+        print(head_strs := [j for j in header.strings])
+        # for i in rows:
+        #     print([j for j in i.strings])
+        if flow_rate in head_strs:
+            # do producers
+            print('producers')
+            prefix = '+'
+        elif consumption in head_strs:
+            # do consumers
+            print('consumers')
+            prefix = '-'
+        elif capacity in head_strs:
+            # do batteries
+            print('batteries')
+            prefix = ''
+
+        for i in rows[1:]:
+                strs = [j.replace('\n', '') for j in i.strings]
+                results[strs[1]] = prefix + strs[4]
+    return results
+
+
 # these are the pages we're going to be scraping
 urls = ['https://astroneer.gamepedia.com/Large_Printer',
         'https://astroneer.gamepedia.com/Small_Printer',
@@ -132,13 +172,15 @@ for i in urls:
 for k, v in tables.items():  # k = name of crafting station, v = recipe table for that station
     crafting[k] = process_recipe_table(v)
 
+power_data = get_power_data()
 # write the csv
 csv = list()
 for k in crafting.keys():  # k = crafting station
     for v in crafting[k].keys():  # v = item name
         r = expand_recipe(crafting[k][v]['recipe'])  # recipe for item v
-        csv.append(f'{r[0]},{r[1]},{r[2]},{r[3]},{v},{k},{crafting[k][v]["research_cost"]},,{crafting[k][v]["size"]}')  # look at that beautiful f-string
+        csv.append(f'{r[0]},{r[1]},{r[2]},{r[3]},{v},{k},{crafting[k][v]["research_cost"]},{power_data.get(v, "")},{crafting[k][v]["size"]}')  # look at that beautiful f-string
 
-# ouput to disk
+pp(crafting)
+# output to disk
 with open('recipes.csv', mode='w') as r:
     r.write('\n'.join(csv))
