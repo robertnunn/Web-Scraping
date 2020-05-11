@@ -1,5 +1,8 @@
 """
 What's really funny is that I edited the astroneer wiki to: add information, make it easier to scrape, and be more consistent between pages and the admin is so possessive that he undid all my edits and banned me for 3 days. As a result, this script doesn't accurately scrape data from the astroneer wiki.
+
+TO DO:
+    rewrite parsing code to use pandas .read_html() method
 """
 import os
 import sys
@@ -175,6 +178,13 @@ for k, v in tables.items():  # k = name of crafting station, v = recipe table fo
 power_data = get_power_data()
 # write the csv
 csv = list()
+ing_label = 'Input'
+out_label = 'Output'
+station_label = 'Crafted By'
+cost_label = 'Research Cost'
+power_label = 'Power'
+size_label = 'Size/Class'
+csv.append(f'{ing_label} 1,{ing_label} 2,{ing_label} 3,{ing_label} 4,{out_label},{station_label},{cost_label},{power_label},{size_label}')
 for k in crafting.keys():  # k = crafting station
     for v in crafting[k].keys():  # v = item name
         r = expand_recipe(crafting[k][v]['recipe'])  # recipe for item v
