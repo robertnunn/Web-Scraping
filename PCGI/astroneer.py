@@ -10,39 +10,41 @@ import requests
 import bs4
 import re
 from pprint import pprint as pp
+import pandas as pd
 
 
 def get_recipe_table(url):
     page_req = requests.get(url)  # get the page
     page_req.raise_for_status()  # check for errors
     soup = bs4.BeautifulSoup(page_req.text, 'lxml')  # soupify!
-
+    # print(f'requested: {url}')
     # select tables that are direct children of a div tag, with a class attr containing "zebra" but not "recipeTable"
     table = soup.select('div > table[class~=zebra]:not(table[class~=recipeTable])')
+    # print(table[0])
     return table[0]  # since we should only get one table
 
 
 def process_recipe_row(tr):
     url_master = 'https://astroneer.gamepedia.com'  # this is used to follow links to individual item pages and extract the infobox
-    try:
-        outp, inp = tr.find_all('td')  # get the two cells and assign them to the output and input variables
-        olink = outp.find('a', title=True)  # find the first anchor tag with a title
-        print(olink.get('title'))
-        out_str = olink.get('title')  # there should only be two links in the outp cell, and both "title" attributes are the same
+    # try:
+    #     outp, inp = tr.find_all('td')  # get the two cells and assign them to the output and input variables
+    #     olink = outp.find('a', title=True)  # find the first anchor tag with a title
+    #     print(olink.get('title'))
+    #     out_str = olink.get('title')  # there should only be two links in the outp cell, and both "title" attributes are the same
 
-        # go to the item's page and pull the infobox data
-        item_url = url_master + olink.get('href')
-        info = process_info_box(item_url)
+    #     # go to the item's page and pull the infobox data
+    #     item_url = url_master + olink.get('href')
+    #     info = process_info_box(item_url)
         
-        strs = list()
-        for i in inp.strings:  # grab all the text that is displayed on screen and not any tag info
-            strs.append(i)  # put those strings in a list
-        print(strs)
-        # do some ETL on the recipe list, then output the recipe with some other info
-        return out_str, {'recipe': process_ing_list(strs), 'size': info['size'], 'research_cost': info['research_cost']}
-    except ValueError as e:  # any error in the above "try" block means we're in a header row, not a row with any data
-        print(f'{e}, skipping header row...')
-        return None, None
+    #     strs = list()
+    #     for i in inp.strings:  # grab all the text that is displayed on screen and not any tag info
+    #         strs.append(i)  # put those strings in a list
+    #     print(strs)
+    #     # do some ETL on the recipe list, then output the recipe with some other info
+    #     return out_str, {'recipe': process_ing_list(strs), 'size': info['size'], 'research_cost': info['research_cost']}
+    # except ValueError as e:  # any error in the above "try" block means we're in a header row, not a row with any data
+    #     print(f'{e}, skipping header row...')
+    #     return None, None
 
 
 def process_info_box(url):
@@ -84,30 +86,58 @@ def process_info_box(url):
     return info
 
 
-def process_ing_list(ing_list):
+def process_ing_list(ing_list, patterns):
     ing_dict = dict()
-    count_re = re.compile(' ?x(\d)\n?')  # regex with a group for the count
-    ing_list.pop(0)  # remove the leading whitespace
-    last_ing = ''  # so we can remember the last ingredient name while checking for a quantity string
-    while(len(ing_list)):
-        term = ing_list.pop(0)  # reading the list left to right
-        count = count_re.search(term)  # test if the current term is a quantity string
-        if len(term) > 3 and count is None:  # if no amount is specified, count is 1
-            ing_dict[term] = 1
-            last_ing = term
-        elif count is not None:  # if an amount is specified, set the count
-            ing_dict[last_ing] = int(count.group(1))
-    
+    # print(ing_list)
+    for pattern in patterns:
+        count = pattern.findall(ing_list)
+        if len(count) == 0:
+            pass
+                # print(f'No match found: {ing_list}')
+        else:
+            print(f'Found {len(count)} matches...')
+            for i in count:
+                if i[1] == '':
+                    num = 1
+                else:
+                    num = int(i[1])
+                ing_dict[i[0]] = num
+                print(f'Matched: {i} in "{ing_list}". rebuilt: {i[0]} x{str(num)}')
+
     return ing_dict
+
+
+def pick_label(column_labels, valid_label_list):
+    for _ in column_labels:
+        if _ in valid_label_list:
+            return _
+    
+    raise KeyError(f'No valid label found.\nColumns: {column_labels}\nLabels: {valid_label_list}')
 
 
 def process_recipe_table(table):
     results = dict()
-    rows = table.find_all('tr')  # pull all the rows out of a table
-    for i in rows:
-        name, data = process_recipe_row(i)
-        if name != None:  # if we successfully interpreted a recipe row, add the data to the results dict
-            results[name] = data
+    print(f"processing: crafting table")
+    parsed_table = pd.read_html(str(table))[0]
+    # print(parsed_table)
+    in_label = pick_label(parsed_table.columns.values, input_labels)
+    out_label = pick_label(parsed_table.columns.values, output_labels)
+    print(in_label, '->', out_label)
+
+    data = parsed_table.to_dict()
+    
+    # process each row
+    for i in range(len(parsed_table)):
+        
+        # print([len(i) for i in row])
+        # go to the item's page and pull the infobox data
+        item_url = url_base + data[out_label][i].replace(' ', '_')
+        info = process_info_box(item_url)
+        print('input: ' + data[in_label][i])
+        print('output: ' + data[out_label][i])
+        recipe_dict = process_ing_list(data[in_label][i], patterns)
+        results[data[out_label][i]] = {'recipe': recipe_dict, 'size': info['size'], 'research_cost': info['research_cost']}
+
     return results
 
 
@@ -159,7 +189,8 @@ def get_power_data():
 
 
 # these are the pages we're going to be scraping
-urls = ['https://astroneer.gamepedia.com/Large_Printer',
+urls = [
+        'https://astroneer.gamepedia.com/Large_Printer',
         'https://astroneer.gamepedia.com/Small_Printer',
         'https://astroneer.gamepedia.com/Medium_Printer',
         'https://astroneer.gamepedia.com/Chemistry_Lab',
@@ -168,6 +199,54 @@ urls = ['https://astroneer.gamepedia.com/Large_Printer',
         ]
 tables = dict()
 crafting = dict()
+url_base = 'https://astroneer.gamepedia.com/'
+# input/output column aliases
+input_labels = ['Input', 'Recipe']
+output_labels = ['Output', 'Name']
+
+# Tuple of search patterns
+# '(Aluminum(?: Alloy)?)(?: x(\d))?'  can leave the digit group off the patterns and append it when compiling the regex
+base_patterns = ('(Ammonium)',
+                '(Argon)',
+                '(Carbon)',
+                '(Ceramic)',
+                '(Clay)',
+                '(Compound)',
+                '(Copper)',
+                '(Diamond)',
+                '(Explosive Powder)',
+                '(Glass)',
+                '(Graphene)',
+                '(Graphite)',
+                '(Helium)',
+                '(Hematite)',
+                '(Hydrazine)',
+                '(Hydrogen)',
+                '(Iron)',
+                '(Laterite)',
+                '(Lithium)',
+                '(Malachite)',
+                '(Methane)',
+                '(Nanocarbon Alloy)',
+                '(Nitrogen)',
+                '(Organic)',
+                '(Plastic)',
+                '(Quartz)',
+                '(Resin)',
+                '(Rubber)',
+                '(Silicone)',
+                '(Sphalerite)',
+                '(Steel)',
+                '(Sulfur)',
+                '(Titanite)',
+                '(Wolframite)',
+                '(Zinc)',
+                '(Aluminum(?: Alloy)?)',
+                '(Titanium(?: Alloy)?)',
+                '(Tungsten(?: Carbide)?)',
+)
+digit_group = '(?: x(\d))?'
+patterns = [re.compile(i+digit_group) for i in base_patterns]  # append the digit group and compile the regexes
 
 for i in urls:
     tables[os.path.basename(i)] = get_recipe_table(i)  # basename(i) returns everything after the last '/'
