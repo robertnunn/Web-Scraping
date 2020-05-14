@@ -180,7 +180,6 @@ def get_scrap_data():
     for _ in tables:
         headers = _.find('th')
         if headers != None and headers.string != None:
-            strs = headers.string
             if scrap_table_marker == headers.string.replace('\n', ''):
                 table = _
                 break
