@@ -2,7 +2,7 @@
 What's really funny is that I edited the astroneer wiki to: add information, make it easier to scrape, and be more consistent between pages and the admin is so possessive that he undid all my edits and banned me for 3 days. As a result, this script doesn't accurately scrape data from the astroneer wiki.
 
 TO DO:
-    rewrite parsing code to use pandas .read_html() method
+    
 """
 import os
 import sys
@@ -22,29 +22,6 @@ def get_recipe_table(url):
     table = soup.select('div > table[class~=zebra]:not(table[class~=recipeTable])')
     # print(table[0])
     return table[0]  # since we should only get one table
-
-
-def process_recipe_row(tr):
-    url_master = 'https://astroneer.gamepedia.com'  # this is used to follow links to individual item pages and extract the infobox
-    # try:
-    #     outp, inp = tr.find_all('td')  # get the two cells and assign them to the output and input variables
-    #     olink = outp.find('a', title=True)  # find the first anchor tag with a title
-    #     print(olink.get('title'))
-    #     out_str = olink.get('title')  # there should only be two links in the outp cell, and both "title" attributes are the same
-
-    #     # go to the item's page and pull the infobox data
-    #     item_url = url_master + olink.get('href')
-    #     info = process_info_box(item_url)
-        
-    #     strs = list()
-    #     for i in inp.strings:  # grab all the text that is displayed on screen and not any tag info
-    #         strs.append(i)  # put those strings in a list
-    #     print(strs)
-    #     # do some ETL on the recipe list, then output the recipe with some other info
-    #     return out_str, {'recipe': process_ing_list(strs), 'size': info['size'], 'research_cost': info['research_cost']}
-    # except ValueError as e:  # any error in the above "try" block means we're in a header row, not a row with any data
-    #     print(f'{e}, skipping header row...')
-    #     return None, None
 
 
 def process_info_box(url):
@@ -188,6 +165,37 @@ def get_power_data():
     return results
 
 
+def get_scrap_data():
+    url = 'https://astroneer.gamepedia.com/Scrap'
+    req = requests.get(url)
+    req.raise_for_status()
+    soup = bs4.BeautifulSoup(req.text, 'lxml')
+    scrap_table_marker = 'Name'
+    results = dict()
+
+    fields = ['Name', 'Full Scrap Amount']
+    tables = soup.find_all('table')
+    # print(tables)
+    # print(len(tables))
+    for _ in tables:
+        headers = _.find('th')
+        if headers != None and headers.string != None:
+            strs = headers.string
+            if scrap_table_marker == headers.string.replace('\n', ''):
+                table = _
+                break
+    
+    # print(str(table)[:100])
+    parsed_table = pd.read_html(str(table))[0]
+    data = parsed_table[fields].to_dict()
+    # pp(data)
+    for _ in range(len(parsed_table)):
+        item = data[fields[0]][_]
+        item = item.replace(' (Full) *', '').replace(' **', '').replace(' (Full)', '')
+        results[item] = data[fields[1]][_]
+
+    return results
+
 # these are the pages we're going to be scraping
 urls = [
         'https://astroneer.gamepedia.com/Large_Printer',
@@ -205,7 +213,6 @@ input_labels = ['Input', 'Recipe']
 output_labels = ['Output', 'Name']
 
 # Tuple of search patterns
-# '(Aluminum(?: Alloy)?)(?: x(\d))?'  can leave the digit group off the patterns and append it when compiling the regex
 base_patterns = ('(Ammonium)',
                 '(Argon)',
                 '(Carbon)',
@@ -255,6 +262,7 @@ for k, v in tables.items():  # k = name of crafting station, v = recipe table fo
     crafting[k] = process_recipe_table(v)
 
 power_data = get_power_data()
+scrap_data = get_scrap_data()
 # write the csv
 csv = list()
 ing_label = 'Input'
@@ -263,13 +271,14 @@ station_label = 'Crafted By'
 cost_label = 'Research Cost'
 power_label = 'Power'
 size_label = 'Size/Class'
-csv.append(f'{ing_label} 1,{ing_label} 2,{ing_label} 3,{ing_label} 4,{out_label},{station_label},{cost_label},{power_label},{size_label}')
+scrap_label = 'Scrap Value'
+csv.append(f'{ing_label} 1,{ing_label} 2,{ing_label} 3,{ing_label} 4,{out_label},{station_label},{cost_label},{scrap_label},{power_label},{size_label}')
 for k in crafting.keys():  # k = crafting station
     for v in crafting[k].keys():  # v = item name
         r = expand_recipe(crafting[k][v]['recipe'])  # recipe for item v
-        csv.append(f'{r[0]},{r[1]},{r[2]},{r[3]},{v},{k},{crafting[k][v]["research_cost"]},{power_data.get(v, "")},{crafting[k][v]["size"]}')  # look at that beautiful f-string
+        csv.append(f'{r[0]},{r[1]},{r[2]},{r[3]},{v},{k},{crafting[k][v]["research_cost"]},{scrap_data.get(v, "")},{power_data.get(v, "")},{crafting[k][v]["size"]}')  # look at that beautiful f-string
 
-pp(crafting)
+# pp(scrap_data)
 # output to disk
 with open('recipes.csv', mode='w') as r:
     r.write('\n'.join(csv))
