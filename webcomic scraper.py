@@ -17,6 +17,7 @@ import requests
 import re
 from pprint import pprint as pp
 import json
+from dateutil.parser import parse
 
 webcomics_folder = 'D:/Pictures/Webcomics/'
 new_folder = webcomics_folder + 'New/'
@@ -36,12 +37,12 @@ def get_comics(comic_dict):
             img_url = eval(comic_dict['img_url_mod'])
         # title the comic is one is available/defined
         if comic_dict['title'] != "":
-            title = eval(comic_dict['title']) + os.path.splitext(img_url)[1]
+            title = eval(comic_dict['title']).replace('/', '-').replace('\\', '-') + os.path.splitext(img_url)[1]
         else:
             title = os.path.basename(img_url)
         
         if comic_dict['numbering'] != False:
-            img_filename = f'{str(eval(comic_dict["numbering"])).zfill(4)} - {title}'
+            img_filename = f'{eval(comic_dict["numbering"])} - {title}'
         else:
             img_filename = title  # shouldn't ever have a title but no numbering (maybe?)
         img_filename = f'{comic_dict["folder"]}/{img_filename}'  # append comic-specific folder to path
