@@ -37,7 +37,7 @@ def get_comics(comic_dict):
             img_url = eval(comic_dict['img_url_mod'])
         # title the comic is one is available/defined
         if comic_dict['title'] != "":
-            title = eval(comic_dict['title']).replace('/', '-').replace('\\', '-') + os.path.splitext(img_url)[1]
+            title = re.sub('[\\\/\:\*\?\"\<\>\|\t\n]', '-', eval(comic_dict['title'])) + os.path.splitext(img_url)[1]
         else:
             title = os.path.basename(img_url)
         
