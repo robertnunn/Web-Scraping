@@ -21,6 +21,7 @@ from dateutil.parser import parse
 
 webcomics_folder = 'D:/Pictures/Webcomics/'
 new_folder = webcomics_folder + 'New/'
+finished_folder = webcomics_folder + 'Not Updating/'
 
 def get_comics(comic_dict):
     url = comic_dict['url']
@@ -37,18 +38,18 @@ def get_comics(comic_dict):
             img_url = eval(comic_dict['img_url_mod'])
         # title the comic is one is available/defined
         if comic_dict['title'] != "":
-            title = re.sub('[\\\/\:\*\?\"\<\>\|\t\n]', '-', eval(comic_dict['title'])) + os.path.splitext(img_url)[1]
+            title = re.sub(r'[\\\/\:\*\?\"\<\>\|\t\n]', '-', eval(comic_dict['title'])) + os.path.splitext(img_url)[1]
         else:
             title = os.path.basename(img_url)
         
         if comic_dict['numbering'] != False:
             img_filename = f'{eval(comic_dict["numbering"])} - {title}'
         else:
-            img_filename = title  # shouldn't ever have a title but no numbering (maybe?)
+            img_filename = title  
         img_filename = f'{comic_dict["folder"]}/{img_filename}'  # append comic-specific folder to path
 
-        # if this particular comic exists in either of the two proper places, we have presumably reached the most recent already-downloaded comic, so break the loop and move on to the next comic
-        if not os.path.exists(new_folder + img_filename) and not os.path.exists(webcomics_folder + img_filename):
+        # if this particular comic exists in any of the three proper places, we have presumably reached the most recent already-downloaded comic, so break the loop and move on to the next comic
+        if not os.path.exists(new_folder + img_filename) and not os.path.exists(webcomics_folder + img_filename) and not os.path.exists(finished_folder + img_filename):
             img_req = requests.get(img_url)
             img_req.raise_for_status()
             with open(new_folder + img_filename, 'wb') as c:
