@@ -1,7 +1,5 @@
 """
-What's really funny is that I edited the astroneer wiki to: add information, make it easier to scrape, and be more consistent between pages and the admin is so possessive that he undid all my edits and banned me for 3 days. As a result, this script doesn't accurately scrape data from the astroneer wiki.
 
-TO DO:
     
 """
 import os
@@ -43,10 +41,13 @@ def process_info_box(url):
                   'Unlock Cost': 'research_cost'}
     for i in rows:  # strip line breaks and commas out (as this will ultimately be a csv)
         row_strings.append([j.replace('\n', '').replace(',', '') for j in i.strings])
-    row_strings = row_strings[-6:]  # this is some evil magic number bs; it works but it's fragile
+    # row_strings = row_strings[-6:]  # this is some evil magic number bs; it works but it's fragile
+    parsed_table = pd.read_html(str(soup.select('table[class~="recipeTable"]')[0]))  # this is a result list, len == 1
+    recipe_dict = process_ing_list(parsed_table[0]['Input'][0], patterns) # get the only list element, "input" column, only row
     
     for i in row_strings:  # this for loop iterates through each row of the table and extracts data under the assumption that "key" appears before "value" _somewhere_
         attr = ''
+        # print(i)
         while(len(i)):  # because we're popping list items, the len(list) will be 0 when finished with that row
             term = i.pop(0)
             # print(f'term: {term}')
@@ -60,6 +61,8 @@ def process_info_box(url):
             
             # print(info)
     info['research_cost'] = info.get('research_cost', 'Unlocked').strip()  # data validation for the cost and some formatting
+    # print(info)
+    info['recipe'] = recipe_dict
     return info
 
 
@@ -112,8 +115,8 @@ def process_recipe_table(table):
         info = process_info_box(item_url)
         print('input: ' + data[in_label][i])
         print('output: ' + data[out_label][i])
-        recipe_dict = process_ing_list(data[in_label][i], patterns)
-        results[data[out_label][i]] = {'recipe': recipe_dict, 'size': info['size'], 'research_cost': info['research_cost']}
+        # recipe_dict = process_ing_list(data[in_label][i], patterns)
+        results[data[out_label][i]] = {'recipe': info['recipe'], 'size': info['size'], 'research_cost': info['research_cost']}
 
     return results
 
@@ -252,6 +255,7 @@ base_patterns = ('(Ammonium)',
                 '(Tungsten(?: Carbide)?)',
 )
 digit_group = '(?: x(\d))?'
+# original order: i+digit_group
 patterns = [re.compile(i+digit_group) for i in base_patterns]  # append the digit group and compile the regexes
 
 for i in urls:
@@ -260,6 +264,7 @@ for i in urls:
 for k, v in tables.items():  # k = name of crafting station, v = recipe table for that station
     crafting[k] = process_recipe_table(v)
 
+pp(crafting)
 power_data = get_power_data()
 scrap_data = get_scrap_data()
 # write the csv
