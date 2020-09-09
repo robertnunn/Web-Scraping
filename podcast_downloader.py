@@ -21,10 +21,9 @@ from pprint import pprint as pp
 
 
 def download_podcast(podcast_url, target_folder):
-    sites = {   'stitcher': stitcher_download,
-                'soundcloud': soundcloud_download,
-                'itunes': itunes_download,    
-            }  # only currently supporting stitcher
+    sites = {   'stitcher': stitcher_download,  
+                'iheart': iheartradio_download,
+            }
     os.makedirs(target_folder, exist_ok=True)
     
     for i in sites.keys():
@@ -106,11 +105,40 @@ def stitcher_download(podcast, target_folder):
         save_file(foldername, filename, ep_url)
 
 
-def soundcloud_download():
-    print('soundcloud dl')
+def player_download(podcast, target_folder):
+    url_show_name = podcast[podcast.rfind('/')+1:]
+    show_name = url_show_name.replace('-', ' ').title()
+    
 
-def itunes_download():
-    print('itunes dl')
+def iheartradio_download(podcast, target_folder):
+    req = requests.get(podcast)
+    req.raise_for_status()
+    start_soup = bs4.BeautifulSoup(req.text, 'lxml')
+
+    rss_tag = start_soup.find('a', href=re.compile('megaphone'))
+    if len(rss_tag) == 0:
+        print('Error: podcast has no RSS feed')
+        return
+
+    rss_url = rss_tag.get('href').strip()
+    print(rss_url)
+    rss_req = requests.get(rss_url)
+    soup = bs4.BeautifulSoup(rss_req.text, 'lxml')
+
+    show_name = soup.find('title').string
+    episodes = soup.find_all('item')
+    os.makedirs(f'{target_folder}/{show_name}', exist_ok=True)
+
+    for episode in episodes:
+        ep_title = episode.find('title').string.strip()
+        # next three lines slice and dice an extended date/time stamp into a YYYY-MM-DD format
+        pub_date = episode.find('pubdate').string
+        pub_date = pub_date[pub_date.find(' ')+1:pub_date.find(':')-3]
+        pub_date = datetime.datetime.strptime(pub_date, '%d %b %Y').isoformat()[:10]
+        ep_url = episode.find('enclosure').get('url')
+        ep_filename = f'{pub_date} - {ep_title}.mp3'
+        save_file(f'{target_folder}/{show_name}/', ep_filename, ep_url)
+
 
 os.chdir('D:/Programming/Projects/Web-Scraping')
 

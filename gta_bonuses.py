@@ -5,6 +5,9 @@ import re
 from pprint import pprint as pp
 from email.mime.text import MIMEText
 import logging
+import datetime
+from dateutil.parser import parse
+import sys
 
 
 logging.basicConfig(level=logging.INFO, filename='D:/scripts/gta.log', filemode='a', format='%(asctime)s %(message)s')
@@ -53,23 +56,28 @@ try:
     page.raise_for_status()
     soup = BS(page.text, 'lxml')
     logging.info('retrieved and parsed r/gtaonline')
-    link = soup.find('a', href=target_re)
-    print(bonus_url := url_base + link.get('href'))
-
-    page = requests.get(bonus_url, headers={'User-agent': 'only scraping once per week'})
-    page.raise_for_status()
-    soup = BS(page.text, 'lxml')
-    logging.info('retrieved and parsed bonus page')
-    post = soup.select('div[class~=expando] > form > div > div[class=md]')[0]
-    date = soup.find('title').string
-    date = date[:date.find(' ')]
-    subj = 'GTA Online Bonuses for ' + date
-    msg_body = '<html><body>Here are the GTA Online bonuses for ' + date + ':</br></br>' + str(post)
-    mesg = MIMEText(msg_body, 'html').as_string()
-    logging.info('email body composed')
-    print(mesg)
-    send_smtp_gmail(recipients, subj, mesg)
-    logging.info('script complete')
+    link = soup.find('a', attrs={'href': target_re, 'data-event-action': 'title'})
+    link_date_str = link.string[:link.string.find(' ')]
+    link_date = parse(link_date_str)
+    if link_date.date() != datetime.date.today():
+        logging.info('bonus post not current, retrying in 1 hour')
+        sys.exit(1)
+    else:
+        print(bonus_url := url_base + link.get('href'))
+        page = requests.get(bonus_url, headers={'User-agent': 'only scraping once per week'})
+        page.raise_for_status()
+        soup = BS(page.text, 'lxml')
+        logging.info('retrieved and parsed bonus page')
+        post = soup.select('div[class~=expando] > form > div > div[class=md]')[0]
+        date = soup.find('title').string
+        date = date[:date.find(' ')]
+        subj = 'GTA Online Bonuses for ' + date
+        msg_body = '<html><body>Here are the GTA Online bonuses for ' + date + ':</br></br>' + str(post)
+        mesg = MIMEText(msg_body, 'html').as_string()
+        logging.info('email body composed')
+        print(mesg)
+        send_smtp_gmail(recipients, subj, mesg)
+        logging.info('script complete')
 except Exception as e:
     logging.info(f'Something went wrong:\n{e}')
-    send_smtp_gmail('robnunn10@gmail.com', 'GTA online script failure', f'Something went wrong:\n{e}')
+    # send_smtp_gmail('robnunn10@gmail.com', 'GTA online script failure', f'Something went wrong:\n{e}')
