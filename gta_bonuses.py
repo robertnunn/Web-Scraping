@@ -80,4 +80,4 @@ try:
         logging.info('script complete')
 except Exception as e:
     logging.info(f'Something went wrong:\n{e}')
-    # send_smtp_gmail('robnunn10@gmail.com', 'GTA online script failure', f'Something went wrong:\n{e}')
+    send_smtp_gmail('robnunn10@gmail.com', 'GTA online script failure', f'Something went wrong:\n{e}')
