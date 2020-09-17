@@ -160,3 +160,7 @@ for _ in new_folder_list:
         os.rmdir(_)
     except:
         pass
+try:
+    os.rmdir(dest_folder)
+except:
+    pass
