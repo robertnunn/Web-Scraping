@@ -64,6 +64,8 @@ try:
     print(link_date.date(), ', ', datetime.date.today())
     if link_date.date() != datetime.date.today() and link_date_alt.date() != datetime.date.today():
         logging.info(f'date_str={link_date_str}, parsed={link_date}')
+        mesg = MIMEText(f'bonus script failed date check\nlink_date_str={link_date_str}\nlink_date={link_date}\nlink_date_alt={link_date_alt}\ntoday={datetime.date.today()}').as_string()
+        send_smtp_gmail(recipients[0], 'GTA Online bonus script failure', mesg)
         # logging.info('bonus post not current, retrying in 1 hour')
         sys.exit(1)
     else:
