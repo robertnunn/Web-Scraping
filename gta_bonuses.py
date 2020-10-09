@@ -58,9 +58,13 @@ try:
     logging.info('retrieved and parsed r/gtaonline')
     link = soup.find('a', attrs={'href': target_re, 'data-event-action': 'title'})
     link_date_str = link.string[:link.string.find(' ')]
-    link_date = parse(link_date_str)
-    if link_date.date() != datetime.date.today():
-        logging.info('bonus post not current, retrying in 1 hour')
+    link_date = parse(link_date_str, dayfirst=True)
+    link_date_alt = parse(link_date_str, dayfirst=False)
+    print(link_date_str)
+    print(link_date.date(), ', ', datetime.date.today())
+    if link_date.date() != datetime.date.today() and link_date_alt.date() != datetime.date.today():
+        logging.info(f'date_str={link_date_str}, parsed={link_date}')
+        # logging.info('bonus post not current, retrying in 1 hour')
         sys.exit(1)
     else:
         print(bonus_url := url_base + link.get('href'))
@@ -76,6 +80,8 @@ try:
         mesg = MIMEText(msg_body, 'html').as_string()
         logging.info('email body composed')
         print(mesg)
+        # with open('temp.txt', 'w') as t:
+        #     t.write(mesg)
         send_smtp_gmail(recipients, subj, mesg)
         logging.info('script complete')
 except Exception as e:
