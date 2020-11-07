@@ -56,20 +56,26 @@ try:
     page.raise_for_status()
     soup = BS(page.text, 'lxml')
     logging.info('retrieved and parsed r/gtaonline')
-    link = soup.find('a', attrs={'href': target_re, 'data-event-action': 'title'})
-    link_date_str = link.string[:link.string.find(' ')]
-    link_date = parse(link_date_str, dayfirst=True)
-    link_date_alt = parse(link_date_str, dayfirst=False)
-    print(link_date_str)
-    print(link_date.date(), ', ', datetime.date.today())
-    if link_date.date() != datetime.date.today() and link_date_alt.date() != datetime.date.today():
-        logging.info(f'date_str={link_date_str}, parsed={link_date}')
+    found = False
+    links = soup.find_all('a', attrs={'href': target_re, 'data-event-action': 'title'})
+    for link in links:
+        link_date_str = link.string[:link.string.find(' ')]
+        link_date = parse(link_date_str, dayfirst=True)
+        link_date_alt = parse(link_date_str, dayfirst=False)
+        print(link_date_str)
+        print(link_date.date(), ', ', datetime.date.today())
+        if link_date.date() == datetime.date.today() or link_date_alt.date() == datetime.date.today():
+            bonus_link = link
+            found = True
+
+    if not found:
+        logging.info(f'date_str={link_date_str}, parsed={link_date}, alt={link_date_alt}')
         mesg = MIMEText(f'bonus script failed date check\nlink_date_str={link_date_str}\nlink_date={link_date}\nlink_date_alt={link_date_alt}\ntoday={datetime.date.today()}').as_string()
         send_smtp_gmail(recipients[0], 'GTA Online bonus script failure', mesg)
         # logging.info('bonus post not current, retrying in 1 hour')
         sys.exit(1)
     else:
-        print(bonus_url := url_base + link.get('href'))
+        print(bonus_url := url_base + bonus_link.get('href'))
         page = requests.get(bonus_url, headers={'User-agent': 'only scraping once per week'})
         page.raise_for_status()
         soup = BS(page.text, 'lxml')
