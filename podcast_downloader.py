@@ -115,12 +115,18 @@ def iheartradio_download(podcast, target_folder):
     req.raise_for_status()
     start_soup = bs4.BeautifulSoup(req.text, 'lxml')
 
-    rss_tag = start_soup.find('a', href=re.compile('megaphone'))
-    if len(rss_tag) == 0:
+    # rss_tag = start_soup.find('a', href=re.compile('megaphone'))
+    mega_pos = req.text.find('megaphone')
+    # pos = req.text.rfind('"', mega_pos)
+    # end_pos = req.text.find('"', mega_pos)
+    # print(f'mega: {mega_pos}, pos: {pos}, end_pos: {end_pos}')
+    rss_url = req.text[mega_pos-15:mega_pos+31].strip()
+    print(rss_url)
+    if len(rss_url) == 0:
         print('Error: podcast has no RSS feed')
         return
 
-    rss_url = rss_tag.get('href').strip()
+    # rss_url = rss_tag.get('href').strip()
     print(rss_url)
     rss_req = requests.get(rss_url)
     soup = bs4.BeautifulSoup(rss_req.text, 'lxml')
