@@ -42,7 +42,13 @@ def process_info_box(url):
     for i in rows:  # strip line breaks and commas out (as this will ultimately be a csv)
         row_strings.append([j.replace('\n', '').replace(',', '') for j in i.strings])
     # row_strings = row_strings[-6:]  # this is some evil magic number bs; it works but it's fragile
-    parsed_table = pd.read_html(str(soup.select('table[class~="recipeTable"]')[0]))  # this is a result list, len == 1
+    try:
+        parsed_table = pd.read_html(str(soup.select('table[class~="recipeTable"]')[0]))  # this is a result list, len == 1
+    except IndexError as e:
+        info['recipe'] = None
+        info['size'] = None
+        info['research_cost'] = None
+        return info
     recipe_dict = process_ing_list(parsed_table[0]['Input'][0], patterns) # get the only list element, "input" column, only row
     
     for i in row_strings:  # this for loop iterates through each row of the table and extracts data under the assumption that "key" appears before "value" _somewhere_
@@ -95,6 +101,14 @@ def pick_label(column_labels, valid_label_list):
     raise KeyError(f'No valid label found.\nColumns: {column_labels}\nLabels: {valid_label_list}')
 
 
+def encode_reserved_chars(url: str):
+    global reserved_uri_encodings
+    for k,v in reserved_uri_encodings.items():
+        url = url.replace(k, v)
+
+    return url
+
+
 def process_recipe_table(table):
     results = dict()
     print(f"processing: crafting table")
@@ -112,6 +126,7 @@ def process_recipe_table(table):
         # print([len(i) for i in row])
         # go to the item's page and pull the infobox data
         item_url = url_base + data[out_label][i].replace(' ', '_')
+        item_url = encode_reserved_chars(item_url)
         info = process_info_box(item_url)
         print('input: ' + data[in_label][i])
         print('output: ' + data[out_label][i])
@@ -123,11 +138,14 @@ def process_recipe_table(table):
 
 def expand_recipe(recipe):
     r = list()
-    for k, v in recipe.items():  # k = ingredient, v = count
-        for i in range(v):
-            r.append(k)  # adds each ingredient to the list a number of times equal to its count
-    while len(r) < 4:  # add empty strings to bring the ingredient count up to four, to make formatting the csv easier
-        r.append('')
+    try:
+        for k, v in recipe.items():  # k = ingredient, v = count
+            for i in range(v):
+                r.append(k)  # adds each ingredient to the list a number of times equal to its count
+        while len(r) < 4:  # add empty strings to bring the ingredient count up to four, to make formatting the csv easier
+            r.append('')
+    except AttributeError as e:
+        return ['', '', '', '']
     return r
 
 
@@ -176,7 +194,7 @@ def get_scrap_data():
     scrap_table_marker = 'Name'
     results = dict()
 
-    fields = ['Name', 'Full Scrap Amount']
+    fields = ['Name', 'Scrap Amount']
     tables = soup.find_all('table')
     # print(tables)
     # print(len(tables))
@@ -209,6 +227,27 @@ urls = [
         ]
 tables = dict()
 crafting = dict()
+reserved_uri_encodings = {
+    '!': '%21',
+    '#': '%23',
+    '$': '%24',
+    '%': '%25',
+    '&': '%26',
+    "'": '%27',
+    '(': '%28',
+    ')': '%29',
+    '*': '%2A',
+    '+': '%2B',
+    ',': '%2C',
+    # '/': '%2F',
+    # ':': '%3A',
+    ';': '%3B',
+    '=': '%3D',
+    # '?': '%3F',
+    '@': '%40',
+    '[': '%5B',
+    ']': '%5D',
+}
 url_base = 'https://astroneer.gamepedia.com/'
 # input/output column aliases
 input_labels = ['Input', 'Recipe']
@@ -254,7 +293,7 @@ base_patterns = ('(Ammonium)',
                 '(Titanium(?: Alloy)?)',
                 '(Tungsten(?: Carbide)?)',
 )
-digit_group = '(?: x(\d))?'
+digit_group = r'(?: x(\d))?'
 # original order: i+digit_group
 patterns = [re.compile(i+digit_group) for i in base_patterns]  # append the digit group and compile the regexes
 
