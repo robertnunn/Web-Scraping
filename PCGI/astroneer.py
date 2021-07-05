@@ -154,10 +154,11 @@ def get_power_data():
     power_req = requests.get(url)
     power_req.raise_for_status()
     soup = bs4.BeautifulSoup(power_req.text, 'lxml')
-    flow_rate = 'Flow Rate\n'
+    flow_rate = 'Flow Rate (U/s)\n'
     capacity = 'Capacity\n'
     consumption = 'Consumption Rate\n'
     prefix = ';'
+    suffix = 'error'
     results = dict()
     tables = soup.find_all('table', limit=3)
     for table in tables:
@@ -171,18 +172,21 @@ def get_power_data():
             # do producers
             print('producers')
             prefix = '+'
+            suffix = ' U/s'
         elif consumption in head_strs:
             # do consumers
             print('consumers')
             prefix = '-'
+            suffix = ''
         elif capacity in head_strs:
             # do batteries
             print('batteries')
             prefix = ''
+            suffix = ''
 
         for i in rows[1:]:
                 strs = [j.replace('\n', '') for j in i.strings]
-                results[strs[1]] = prefix + strs[4]
+                results[strs[1]] = prefix + strs[4] + suffix
     return results
 
 
@@ -262,6 +266,7 @@ base_patterns = ('(Ammonium)',
                 '(Compound)',
                 '(Copper)',
                 '(Diamond)',
+                '(EXO Chip)',
                 '(Explosive Powder)',
                 '(Glass)',
                 '(Graphene)',
