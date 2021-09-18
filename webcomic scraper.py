@@ -33,7 +33,11 @@ def get_comics(comic_dict):
         req.raise_for_status()
         soup = bs4.BeautifulSoup(req.text, 'lxml')
 
-        img_url = comic_dict['img_base'] + soup.select(comic_dict['img'])[0].get('src')
+        try: # detect when no image is present and continue to the previous page
+            img_url = comic_dict['img_base'] + soup.select(comic_dict['img'])[0].get('src')
+        except IndexError:
+            url = comic_dict['prev_base'] + soup.select(comic_dict['prev'])[0].get('href')
+            continue
         if comic_dict['img_url_mod'] != "":
             img_url = eval(comic_dict['img_url_mod'])
         # title the comic is one is available/defined
