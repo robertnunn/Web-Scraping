@@ -4,6 +4,7 @@ import os
 import time
 # import json
 from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.keys import Keys
 from pprint import pprint as pp
 
@@ -40,37 +41,39 @@ def pause_point():
     return
 
 
-driver = webdriver.Chrome()
 zfill_size = 2
 os.chdir(os.path.dirname(__file__))
+service = Service(executable_path="./chromedriver.exe")
+driver = webdriver.Chrome(service=service)
 base_url = 'https://mangadex.org'
 # manga_url = input('Last bit of mangatown URL (no slashes): ')
-folder = r'D:/Documents/Manga/Hen Suki'
-manga_url = 'c0d82f31-be5f-45c9-a8fe-eb5d5eae7400'  #hensuki
+folder = r'D:/Weeb shit/Manga/Yuri Boobs Anthology'
+manga_url = '0bbed55f-a503-4b14-ad08-e0a416420adb'  # yuri boobs anthology
+# manga_url = 'c0d82f31-be5f-45c9-a8fe-eb5d5eae7400'  #hensuki
 full_url = f'{base_url}/title/{manga_url}'   #https://mangadex.org/title/c0d82f31-be5f-45c9-a8fe-eb5d5eae7400
 
 driver.get(full_url)
 time.sleep(1)
 try:
-    elem = driver.find_elements_by_xpath('//button')
-    # print([el.text for el in elem])
-    for el in elem:
-        if el.text.lower() == "chapters":
-            # print(el.tag_name)
-            # print(el.get_attribute('class'))
-            # print(el.text)
-            ch_button = el
-            break
-    ch_button.click()
-    time.sleep(3)
+# elem = driver.find_elements_by_xpath('//button')
+# # print([el.text for el in elem])
+# for el in elem:
+#     if el.text.lower() == "chapters":
+#         # print(el.tag_name)
+#         # print(el.get_attribute('class'))
+#         # print(el.text)
+#         ch_button = el
+#         break
+# ch_button.click()
+# time.sleep(3)
 
-    buttons = driver.find_elements_by_xpath('//button')
-    for b in buttons:
-        if b.text.lower() == 'load more':
-            # print(b.text)
-            b.click()
-            break
-    time.sleep(1)
+# buttons = driver.find_elements_by_xpath('//button')
+# for b in buttons:
+#     if b.text.lower() == 'load more':
+#         # print(b.text)
+#         b.click()
+#         break
+# time.sleep(1)
 
     lang_filter = driver.find_elements_by_xpath('//input')
     # print(len(lang_filter))

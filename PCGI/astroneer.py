@@ -297,7 +297,7 @@ base_patterns = ('(Ammonium)',
                 '(Aluminum(?: Alloy)?)',
                 '(Titanium(?: Alloy)?)',
                 '(Tungsten(?: Carbide)?)',
-)
+            )
 digit_group = r'(?: x(\d))?'
 # original order: i+digit_group
 patterns = [re.compile(i+digit_group) for i in base_patterns]  # append the digit group and compile the regexes
@@ -328,5 +328,8 @@ for k in crafting.keys():  # k = crafting station
 
 # pp(scrap_data)
 # output to disk
+if os.path.exists('recipes.csv'):
+    os.rename('recipes.csv', 'old recipes.csv')
+
 with open('recipes.csv', mode='w') as r:
     r.write('\n'.join(csv))

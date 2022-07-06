@@ -21,8 +21,11 @@ from pprint import pprint as pp
 
 
 def download_podcast(podcast_url, target_folder):
-    sites = {   'stitcher': stitcher_download,  
+    sites = {
+                'stitcher': stitcher_download,  
                 'iheart': iheartradio_download,
+                '.xml': rss_download,
+                '.rss': rss_download,
             }
     os.makedirs(target_folder, exist_ok=True)
     
@@ -32,8 +35,8 @@ def download_podcast(podcast_url, target_folder):
 
 
 def save_file(folder, filename, source_url):
-    disallowed = ['/', '\\', '"', '*', '?', '<', '>', '|']
-    replacement = [(':', '-')]
+    disallowed = ['/', '\\', '"', '?', '<', '>', '|']
+    replacement = [(':', '-'), ('*', '-')]
     for i in disallowed:
         filename = filename.replace(i, '')
     for i in replacement:
@@ -105,29 +108,8 @@ def stitcher_download(podcast, target_folder):
         save_file(foldername, filename, ep_url)
 
 
-def player_download(podcast, target_folder):
-    url_show_name = podcast[podcast.rfind('/')+1:]
-    show_name = url_show_name.replace('-', ' ').title()
-    
-
-def iheartradio_download(podcast, target_folder):
-    req = requests.get(podcast)
-    req.raise_for_status()
-    start_soup = bs4.BeautifulSoup(req.text, 'lxml')
-
-    rss_tag = start_soup.find('a', href=re.compile('feeds\.megaphone'))
-    # mega_pos = req.text.find('megaphone')
-    # pos = req.text.rfind('"', mega_pos)
-    # end_pos = req.text.find('"', mega_pos)
-    # print(f'mega: {mega_pos}, pos: {pos}, end_pos: {end_pos}')
-    rss_url = rss_tag.get('href').strip()
-    print(rss_url)
-    if len(rss_url) == 0:
-        print('Error: podcast has no RSS feed')
-        return
-
-    # rss_url = rss_tag.get('href').strip()
-    print(rss_url)
+def rss_download(rss_url, target_folder):
+    #currently for rss feeds from megaphone
     rss_req = requests.get(rss_url)
     soup = bs4.BeautifulSoup(rss_req.text, 'lxml')
 
@@ -144,6 +126,27 @@ def iheartradio_download(podcast, target_folder):
         ep_url = episode.find('enclosure').get('url')
         ep_filename = f'{pub_date} - {ep_title}.mp3'
         save_file(f'{target_folder}/{show_name}/', ep_filename, ep_url)
+    
+
+def iheartradio_download(podcast, target_folder):
+    req = requests.get(podcast)
+    req.raise_for_status()
+    start_soup = bs4.BeautifulSoup(req.text, 'lxml')
+
+    rss_tag = start_soup.find('a', href=re.compile(r'feeds\.megaphone'))
+    # mega_pos = req.text.find('megaphone')
+    # pos = req.text.rfind('"', mega_pos)
+    # end_pos = req.text.find('"', mega_pos)
+    # print(f'mega: {mega_pos}, pos: {pos}, end_pos: {end_pos}')
+    rss_url = rss_tag.get('href').strip()
+    print(rss_url)
+    if len(rss_url) == 0:
+        print('Error: podcast has no RSS feed')
+        return
+
+    # rss_url = rss_tag.get('href').strip()
+    print(rss_url)
+    rss_download(rss_url, target_folder)
 
 
 os.chdir('D:/Programming/Projects/Web-Scraping')

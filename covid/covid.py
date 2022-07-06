@@ -1,18 +1,16 @@
 import requests
-import json
-import csv
 from datetime import datetime, timedelta
 import os
 import logging
 
 # config options
-max_delta = timedelta(1,0,0,0,0,12,0) # maximum age of latest data for analysis to be valid, default 24hrs
+max_delta = timedelta(1,0,0,0,0,13,0) # maximum age of latest data for analysis to be valid, default 24hrs
 pos_threshold = 2.0 # maximum % threshold for positive testing rate, above this no email is sent
 os.chdir(os.path.dirname(__file__))
 logging.basicConfig(level=logging.INFO, filename='covid.log', filemode='a', format='%(asctime)s %(message)s')
 
 
-def send_smtp_gmail(email_to: list, subject, msg, login_info='email.json', smtp_server="smtp.gmail.com:587"):
+def send_smtp_gmail(email_to: list, subject: str, msg: str, login_info='email.json', smtp_server="smtp.gmail.com:587"):
     """
     sends an email with the relevant fields using GMail
     :param email_to: list of valid email addresses
@@ -29,7 +27,6 @@ def send_smtp_gmail(email_to: list, subject, msg, login_info='email.json', smtp_
         login = json.loads(f.read())
 
     email_to = ','.join(email_to)
-
     username = login["username"]
     password = login["password"]
     
@@ -38,8 +35,6 @@ def send_smtp_gmail(email_to: list, subject, msg, login_info='email.json', smtp_
     email['From'] = username
     email['To'] = email_to
     
-    # email_body = ''.join(['From: ', username, '\nSubject: ', subject, "\n", msg])
-
     server = smtplib.SMTP(smtp_server)
     server.starttls()
     server.login(username, password)
@@ -75,6 +70,7 @@ rolling_avg_index = -2
 date_index = 0
 pos_percent = float(covid[data_index][rolling_avg_index])
 pos_delta = float(covid[data_index][rolling_avg_index]) - float(covid[data_index-1][rolling_avg_index])
+pos_delta = f'{pos_delta}' if pos_delta < 0 else f'+{pos_delta}'
 time_pattern = r'%m/%d/%Y'
 data_date = datetime.strptime(covid[data_index][date_index], time_pattern)
 today = datetime.today()
@@ -87,6 +83,6 @@ else:
     logging.info(f'% Testing Positive: {pos_percent}')
     if pos_percent < pos_threshold:
         logging.info(f'mailed to: {recipients}')
-        send_smtp_gmail(recipients, f'COVID-19 Positive Test Rate Below {pos_threshold}%', f'On {data_date.date()}, the 7-day rolling average of positive tests is: {pos_percent}%, a difference of {round(pos_delta, 2)} percentage points from the day before.')
+        send_smtp_gmail(recipients, f'COVID-19 Positive Test Rate Below {pos_threshold}%', f'On {data_date.date()}, the 7-day rolling average of positive tests is: {pos_percent}%, a difference of {pos_delta} percentage points from the day before.', '../email.json')
     else:
         logging.info('Pos rate over threshold')

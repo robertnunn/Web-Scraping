@@ -1,0 +1,130 @@
+{
+  "Archipelago": {
+    "Break of Dawn": "Obtaining the Mission:Mission is added to your log as soon as the game starts.First Objective:Inside the house up the path.(4114, 2204)",
+    "Sanctuary": "Obtaining the Mission:Mission is added to your log after completing the mission Break of Dawn.First Objective:Inside the church to the west of the house where you found the gun.(3588, 2334)",
+    "The Farm": "Iboholmen Church",
+    "The Road to Salthamn": "Stenhaga Farm(2740, 2480)",
+    "The Home Team": "Salthamn (1840, 3080)",
+    "Another Castle": "Vesslan Command Bunker (1490, 3885)",
+    "First Contact": "Vesslan Command Bunker (1470, 3860)",
+    "Beachhead": "Iboholmen Castle (3050, 2810)",
+    "Calling for Help": "Vesslan Command Bunker (1470, 3860)",
+    "Over and Out": "Saltholmen Naval Base (670, 3965)",
+    "Old Bettan": "Iboholmen Church",
+    "The Hunter": "Green Bj\u00f6rk car near Yttervik (3830, 2385)",
+    "Shooting Practice": "M\u00f6rtn\u00e4s (2300, 2900)",
+    "One Can Only Hope": "Iboholmen Castle, Worker's Barrack (3080, 2860)",
+    "Unbearable Lightness": "Vesslan Command Bunker (1470, 3860)",
+    "Road Rage": "Saltholmen Naval Base, Gate House (965, 3945)",
+    "Strength in Numbers": "H\u00e4stvik (465, 3645)",
+    "The Path of the Gods": "Skogsbo (160, 2860)"
+  },
+  "ArchipelagoSouth CoastFarmlandsForestMountainsMarshlandsNorth Coast": {
+    "The Command Bunker Network": "Vesslan Command Bunker",
+    "Flying Blind": "??"
+  },
+  "South Coast": {
+    "Warboard - Minken Bunker": "First Time Region Entry",
+    "The Girl Who Cried Wolf": "Minken Command Bunker (-2100, 2530)",
+    "Spiking the Guns": "Warboard - Minken Bunker (-2100, 2530)",
+    "Beyond the Barricade": "\u00c5s\u00f6 (-695, 2015)",
+    "Safe Harbor": "T\u00e5ngekil (-4055, 3300)",
+    "No Rest for the Weary": "K\u00e5lleby (-2930, 2685)",
+    "Secret Cargo": "Minken Command Bunker (-2100, 2530)",
+    "The Fallen": "Torsberga Fort (-4270, 4415)",
+    "Treasure Hunt": "Villa Kaseberg (-2090, 2630)",
+    "To the Lighthouse": "Sillavik (-3105, 3800)",
+    "Seeds of Doubt": "Knaper\u00e4nna Farm (-2000, 2035)",
+    "At Death's Door": "Hisingafyren Safehouse (-5655, 4542)"
+  },
+  "Farmlands": {
+    "Warboard - Sorken Bunker": "Upon entry of Farmlands Region",
+    "Refueling": "Sorken Bunker",
+    "Hogging Supplies": "Skogshult (-271, 1497)",
+    "Of Machines and Men": "F23 \u00d6verby Air Base",
+    "Total Defense": "Skrankebol (-10, 1290)",
+    "On the Road": "Broskulla (-50, -810)",
+    "Lone Wolf": "-1783, -1325",
+    "Colonists": "-730 -1800",
+    "Law of the Land": "\u00d6sterviks PolicestationRadio in a car (979, 40)",
+    "Stealing from the Poor": "604, -318"
+  },
+  "North Coast": {
+    "The Spotter": "Army Storage (2190, -3600)",
+    "Warboard - Hermelinen Bunker": "Region Entry",
+    "Science of Deduction": "FOA 5 Facility",
+    "Loud and Clear": "??",
+    "Behind the Curtain": "??",
+    "History Repeats Itself": "1870, -3859",
+    "Heavy Loadout": "Letterbox first floor (700, -4300)",
+    "The Ruin of Many a Poor Man": "L\u00f6vn\u00e4s (1549, -3107)",
+    "Left Behind": "812.9, -4215.4 (Letter)",
+    "Troll Toll": "978, -4400(Radio on the table)"
+  },
+  "Forest": {
+    "Warboard - M\u00e5rden Bunker": "First-time Region entry",
+    "The Gas Factory": "When: After completing Warboard - M\u00e5rden BunkerWhere: 1988, 200",
+    "Flying Objects": "Warboard - M\u00e5rden",
+    "Courage, Power and Resilience": "Warboard M\u00e5rden Bunker",
+    "Empty Spaces": "??",
+    "Hazardous Contents": "Beredskapsf\u00f6rr\u00e5d 119 (1400, -560)",
+    "Scrap Metal": "Tornberget 1025,380",
+    "Woodcutter": "Granhygget 1630,-1820",
+    "Exchange Student": "680, 838",
+    "Tilting at Windmills": "Granlugnet (487, 183)",
+    "Our New Home - Preparations": "Resistance Home Base (2636, 2309)",
+    "Our New Home - Home Base Defense": "Started automatically when choosingdifficulty in Our New Home - Preparations"
+  },
+  "??": {
+    "Good News": "??"
+  },
+  "Mountains": {
+    "Warboard - Uttern Bunker": "??",
+    "Lost and Found": "-2830, -1602",
+    "Back on Track": "Uttern Bunker Warboard (back on track)",
+    "A Wrench in the Works": "-3623, 135",
+    "Radio Silence": "Rusaberget-3291, 1165",
+    "Supply Run": "-4010,150",
+    "The Gun Club": "St Maria Church (-3418, -771)",
+    "Out Hiking": "Klinte -4582, -393",
+    "Top of the World": "-4413, 859 (A note on the refrigerator in the house at Ramberga)",
+    "Prospect Tunnel": "-3732, 275 (Upright book on a bookshelf)",
+    "Zero Hour": "-3850, 270"
+  },
+  "Marshlands": {
+    "Warboard - Skvadern Bunker": "First-time Region entry",
+    "The Old Guard": "Interacting with the warboard in the Skvadern command bunker for the first time.",
+    "The Bridge": "Obtaining the Mission:Interacting with the warboard in the Skvadern command bunker for the first time, through the Warboard - Skvadern Bunker mission.(Entrance at -1529, -3329)First Objective:Bridge connecting to the mainland, at the northernmost point of the main island. (-1390, -5011)",
+    "Line of Fire": "??",
+    "The Enemy of my Enemy": "\u00c5ln\u00e4stet  (-1820, 4314)",
+    "Special Delivery": "-2483, -3126",
+    "Gas Run": "-2665, -1845",
+    "Contraband": "-2575, -3100",
+    "Last Stand": "-2463, -3189 (Norrmyra Artillery Base)",
+    "Emergency Supplies": "-983.615, -4361.142",
+    "A Place to Rest": "-1545, -3360"
+  },
+  "Forest Region": {
+    "Not Alone": " (Convoy past IGA Facility)"
+  },
+  "Himfj\u00e4ll": {
+    "For the Sick and the Injured": " (Marks\u00e4tern caf\u00e9)",
+    "Make Some Noise": " (Bj\u00f6rntunet Hotel)",
+    "Arms Race": " (Bj\u00f6rntunet Hotel)",
+    "Nothing but the Snow": " (Himarvet police station)",
+    "Fighting the Cold": " (Bj\u00f6rntunet Hotel)",
+    "The Hellmouth": " (???)",
+    "Ghosts of the Past": " (???)",
+    "The Resistance": " (???)",
+    "A Light in the Dark": "(???, ???)",
+    "Unfinished Investigation": "Mission Activation:Bj\u00f6rntunet Hotel foyer; interact with the newspaper on the wall to the left of the stairs.(4508, -48)First Objective:Readiness Storage 018(3510, -183)",
+    "Last Resort": "(???, ???)",
+    "Behind Closed Doors": "4663, 313South-West of Bergahyttan Hunting Club",
+    "The Secluded": "(???, ???)",
+    "Father and Son": "Mission Activation:This mission is activated from the Warboard in the basement of the Bjorntunet Hotel.(4542, -45) First Objective:\u00d6sterh\u00e4llan (4917, -733)",
+    "Normal Lives": "3870, -341"
+  },
+  "Himjf\u00e4ll island": {
+    "Capitulation": "Bjortunet Hotel"
+  }
+}

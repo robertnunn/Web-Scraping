@@ -1,0 +1,90 @@
+{
+  "target_folder": "D:/Weeb shit/Manga",
+  "mangas": {
+    "mangatown": {
+      "base_url": "https://www.mangatown.com",
+      "header_info": {
+        "referer": "https://www.mangatown.com/",
+        "host": "zjcdn.mangahere.org"
+      },
+      "manga": {
+        "world_s_end_harem": {
+          "status": "completed",
+          "display_name": null
+        },
+        "sono_bisque_doll_wa_koi_wo_suru": {
+          "status": "ongoing",
+          "display_name": "My Dress-up Darling"
+        },
+        "the_world_of_moral_reversal": {
+          "status": "ongoing",
+          "display_name": null
+        },
+        "monster_musume_no_iru_nichijou": {
+          "status": "ongoing",
+          "display_name": "Everyday Life with Monster Girls"
+        },
+        "sekai_de_ichiban_oppai_ga_suki": {
+          "status": "ongoing",
+          "display_name": "Breasts are my Favorite Things in the World"
+        },
+        "ajin_chan_wa_kataritai": {
+          "status": "ongoing",
+          "display_name": "Interviews with Monster Girls"
+        },
+        "spy_x_family": {
+          "status": "ongoing",
+          "display_name": null
+        },
+        "while_killing_slimes_for_300_years_i_became_the_max_level_unknowingly": {
+          "status": "ongoing",
+          "display_name": "While Killing Slimes for 300 Years, I Became the MAX Level Unknowingly"
+        },
+        "overlord": {
+          "status": "ongoing",
+          "display_name": null
+        },
+        "hitomi_chan_is_shy_with_strangers": {
+          "status": "ongoing",
+          "display_name": "Hitomi-chan is Shy with Strangers"
+        },
+        "slime_life": {
+          "status": "ongoing",
+          "display_name": null
+        },
+        "shingeki_no_kyojin": {
+          "status": "completed",
+          "display_name": "Attack on Titan"
+        },
+        "elf_san_wa_yaserarenai": {
+          "status": "ongoing",
+          "display_name": "Elf-san Can't Lose Weight"
+        },
+        "full_metal_alchemist": {
+          "status": "completed",
+          "display_name": null
+        },
+        "magika_no_kenshi_to_shoukan_maou": {
+          "status": "ongoing",
+          "display_name": "Magic Swordsman and Summoner"
+        },
+        "hentai_elf_to_majime_orc": {
+          "status": "completed",
+          "display_name": "A Perverted Elf and a Serious Orc"
+        },
+        "my_balls": {
+          "status": "completed",
+          "display_name": null
+        },
+        "nariyuki_makase_no_tengu_michi": {
+          "status": "completed",
+          "display_name": null
+        },
+        "spice_and_wolf": {
+          "status": "ongoing",
+          "display_name": null
+        }
+      }
+    }
+  }
+}

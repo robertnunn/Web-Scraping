@@ -16,7 +16,7 @@ logging.info('Begin script')
 os.chdir('D:/Programming/Projects/Web-Scraping')
 url = 'http://old.reddit.com/r/gtaonline/'
 url_base = 'http://old.reddit.com'
-target_re = re.compile('weekly_gta_online_bonuses', re.IGNORECASE)
+target_re = re.compile('weekly_bonuses_and_discounts', re.IGNORECASE)
 
 with open('gta_email.txt', 'r') as g:
     recipients = [i.replace('\n', '') for i in g.readlines()]
@@ -71,7 +71,7 @@ try:
     if not found:
         logging.info(f'date_str={link_date_str}, parsed={link_date}, alt={link_date_alt}')
         mesg = MIMEText(f'bonus script failed date check\nlink_date_str={link_date_str}\nlink_date={link_date}\nlink_date_alt={link_date_alt}\ntoday={datetime.date.today()}').as_string()
-        send_smtp_gmail(recipients[0], 'GTA Online bonus script failure', mesg)
+        # send_smtp_gmail(recipients[0], 'GTA Online bonus script failure', mesg)
         # logging.info('bonus post not current, retrying in 1 hour')
         sys.exit(1)
     else:
@@ -90,8 +90,8 @@ try:
         print(mesg)
         # with open('temp.txt', 'w') as t:
         #     t.write(mesg)
-        send_smtp_gmail(recipients, subj, mesg)
+        # send_smtp_gmail(recipients, subj, mesg)
         logging.info('script complete')
 except Exception as e:
     logging.info(f'Something went wrong:\n{e}')
-    send_smtp_gmail('robnunn10@gmail.com', 'GTA online script failure', f'Something went wrong:\n{e}')
+    # send_smtp_gmail('robnunn10@gmail.com', 'GTA online script failure', f'Something went wrong:\n{e}')
