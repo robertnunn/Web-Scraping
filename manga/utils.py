@@ -5,6 +5,13 @@ import re
 import math
 from PIL import Image
 
+from jinja2 import Environment, FileSystemLoader, select_autoescape
+env = Environment(
+    loader=FileSystemLoader("D:/Programming/Projects/Web-Scraping/manga/templates"),
+    autoescape=select_autoescape()
+)
+
+
 img_ext = [
     ".png",
     ".jpg",
@@ -133,69 +140,70 @@ def make_local_gallery(folder, remake_gallery=False, toc_width=10, manga_title='
         folder = folder[:-1]
     if not os.path.exists(f"{folder}/gallery.html") or remake_gallery:
         # title attribute is hover alttext for links
-        bad_tags = load_tags('D:/Programming/Projects/NSFW/hentai_library/bad_tags.txt')
-        stylesheet = (
-            "<link rel=stylesheet href="
-            + (os.path.abspath(folder).count("\\") * "../")
-            + "Programming/Projects/NSFW/hentai_library/hentai.css>"
-        )
-        try:
-            with open(f'{folder}/meta.json', 'r') as m:
-                metadata = json.loads(m.read())
-            meta_table = ['<ul>']
-            for k,v in metadata.items():
-                meta_table.append(f'<li>{k} ')
-                if isinstance(v, list):
-                    if len(v) > 1:
-                        meta_table.append('<ul>')
-                        bad_hits = check_tags(v, bad_tags)
-                        for i in sorted(v):
-                            if i in bad_hits:
-                                bad_tag = ' bad-tag'
-                            else:
-                                bad_tag = ''
-                            meta_table.append(f'<li class="tag{bad_tag}">{i}</li>')
-                        meta_table.append('</ul>')
-                    elif len(v) == 1:
-                        meta_table.append(v[0])
-                    else:
-                        meta_table.append('None listed')
-                    meta_table.append('</li>')
-                else:
-                    meta_table.append(v)
-            id_num = re.search(r'.*\((\d{4,7}?)\)$', folder).group(1)
-            if '(im)' in folder:
-                url_base = f'https://imhentai.xxx/gallery/{id_num}'
-            elif id_num != '0000':
-                url_base = f'https://nhentai.net/g/{id_num}'
-            else:
-                url_base = ''
-            if url_base != '':
-                meta_table.append(f'<li><a href="{url_base}">Source Link</a></li>')
-            meta_table.append('</ul>')
-            meta_table = ''.join(meta_table)
-            metadata_panel = f'<div class="metadata">{meta_table}</div>'
-        except Exception as e:
-            metadata_panel = f'<div class="metadata">{os.path.basename(folder)}</div>'
+        # bad_tags = load_tags('D:/Programming/Projects/NSFW/hentai_library/bad_tags.txt')
+        # stylesheet = (
+        #     "<link rel=stylesheet href="
+        #     + (os.path.abspath(folder).count("\\") * "../")
+        #     + "Programming/Projects/NSFW/hentai_library/hentai.css>"
+        # )
+        # try:
+        #     with open(f'{folder}/meta.json', 'r') as m:
+        #         metadata = json.loads(m.read())
+        #     meta_table = ['<ul>']
+        #     for k,v in metadata.items():
+        #         meta_table.append(f'<li>{k} ')
+        #         if isinstance(v, list):
+        #             if len(v) > 1:
+        #                 meta_table.append('<ul>')
+        #                 bad_hits = check_tags(v, bad_tags)
+        #                 for i in sorted(v):
+        #                     if i in bad_hits:
+        #                         bad_tag = ' bad-tag'
+        #                     else:
+        #                         bad_tag = ''
+        #                     meta_table.append(f'<li class="tag{bad_tag}">{i}</li>')
+        #                 meta_table.append('</ul>')
+        #             elif len(v) == 1:
+        #                 meta_table.append(v[0])
+        #             else:
+        #                 meta_table.append('None listed')
+        #             meta_table.append('</li>')
+        #         else:
+        #             meta_table.append(v)
+        #     id_num = re.search(r'.*\((\d{4,7}?)\)$', folder).group(1)
+        #     if '(im)' in folder:
+        #         url_base = f'https://imhentai.xxx/gallery/{id_num}'
+        #     elif id_num != '0000':
+        #         url_base = f'https://nhentai.net/g/{id_num}'
+        #     else:
+        #         url_base = ''
+        #     if url_base != '':
+        #         meta_table.append(f'<li><a href="{url_base}">Source Link</a></li>')
+        #     meta_table.append('</ul>')
+        #     meta_table = ''.join(meta_table)
+        #     metadata_panel = f'<div class="metadata">{meta_table}</div>'
+        # except Exception as e:
+        #     metadata_panel = f'<div class="metadata">{os.path.basename(folder)}</div>'
 
-        script_src = (
-            (os.path.abspath(folder).count("\\") * "../")
-            + "Programming/Projects/NSFW/hentai_library/hentai_page.js"
-        )
-        toc = list()  # links to each page at the top of a gallery
+        # script_src = (
+        #     (os.path.abspath(folder).count("\\") * "../")
+        #     + "Programming/Projects/NSFW/hentai_library/hentai_page.js"
+        # )
+        # toc = list()  # links to each page at the top of a gallery
         # beginning of the gallery page/metadata
-        html = [
-            f'<html><head><script src="{script_src}"></script><title>{os.path.basename(folder).replace("Chapter", "Ch")} - {manga_title}</title>{stylesheet}</head><body><center><div id="galleries">'
-        ]
-        html.append(metadata_panel)
+        page_title = f'{os.path.basename(folder).replace("Chapter", "Ch")} - {manga_title}'
+        # html = [
+        #     f'<html><head><script src="{script_src}"></script><title></title>{stylesheet}</head><body><center><div id="galleries">'
+        # ]
+        # html.append(metadata_panel)
 
         pix = get_image_list(folder)
         # print(pix)
-        for pic in pix:
-            html.append(
-                f'<img src="{pic[0]}.{pic[1]}" id="{pic[0]}" title="{pic[0]}"></br></br>'
-            )
-            toc.append(f'<a href="#{pic[0]}">Page {pic[0]}</a>')
+        # for pic in pix:
+            # html.append(
+            #     f'<img src="{pic[0]}.{pic[1]}" id="{pic[0]}" title="{pic[0]}"></br></br>'
+            # )
+            # toc.append(f'<a href="#{pic[0]}">Page {pic[0]}</a>')
 
         # add chapter markers if present
         try:
@@ -203,27 +211,26 @@ def make_local_gallery(folder, remake_gallery=False, toc_width=10, manga_title='
                 chapters = ch.read().split("\n")
             ch_list = [i.split(",") for i in chapters]
             for i in ch_list:
-                index = int(i[0]) - 1  # num -> index correction
+                i[0] = int(i[0]) - 1  # num -> index correction
                 if len(i) == 1:
-                    ch_title = f"Chapter {ch_list.index(i)+1}"
-                elif i[1] == "":
-                    ch_title = f"Chapter {ch_list.index(i)+1}"
-                else:
-                    ch_title = i[1]
+                    i.append(f"Chapter {ch_list.index(i)+1}")
+                elif i[1] == '':
+                    i[1] = f"Chapter {ch_list.index(i)+1}"
 
-                toc[index] = toc[index].replace(
-                    "a href", f'a class="ch" title="{ch_title}" href'
-                )
+                # toc[index] = toc[index].replace(
+                #     "a href", f'a class="ch" title="{ch_title}" href'
+                # )
         except:
-            pass
+            ch_list = [['', '']]
 
-        html.append("</center></body></html>")  # end of the gallery page
-        html.insert(
-            2, make_html_table(toc, toc_width)
-        )  # insert TOC at the beginning, just after the gallery metadata, TOC is generated as img tags are generated
+        # html.append("</center></body></html>")  # end of the gallery page
+        # html.insert(
+        #     2, make_html_table(toc, toc_width)
+        # )  # insert TOC at the beginning, just after the gallery metadata, TOC is generated as img tags are generated
 
         with open(f"{folder}/gallery.html", "w", encoding="utf-8") as g:
-            g.write("\n".join(html))
+            g.write(render_template('manga_gallery_template.html', page_title=page_title, page_list=[f'{i[0]}.{i[1]}' for i in pix], chapter_indices=[i[0] for i in ch_list], chapter_titles=[i[1] for i in ch_list], title=os.path.basename(folder)))
+            # g.write("\n".join(html))
 
 
 def make_library_page(folder: str, remake_thumbs=False):
@@ -248,61 +255,93 @@ def make_library_page(folder: str, remake_thumbs=False):
                 thumb.save(f'{i.name}/thumb.png', 'PNG')
     folders.sort(key=lambda f: float(f.split(' ')[1]))  # sort by ch num without needing leading zeros
     
-    table = ['<table>']
-    cols = 5
-    rows = math.ceil(len(folders) / cols) 
-    chapter = 0
-    for i in range(rows):
-        table.append('<tr>')
-        for j in range(cols):
-            table.append(f'<td><a href="{folders[chapter]}/gallery.html"><img src="{folders[chapter]}/thumb.png"><br>{folders[chapter]}</a></td>')
-            chapter += 1
-            if chapter >= len(folders):
-                break
-        table.append('</tr>')
-    table.append('</table>')
-    table = '\n'.join(table)
+    # table = ['<table>']
+    # cols = 5
+    # rows = math.ceil(len(folders) / cols) 
+    # chapter = 0
+    # for i in range(rows):
+    #     table.append('<tr>')
+    #     for j in range(cols):
+    #         table.append(f'<td><a href="{folders[chapter]}/gallery.html"><img src="{folders[chapter]}/thumb.png"><br>{folders[chapter]}</a></td>')
+    #         chapter += 1
+    #         if chapter >= len(folders):
+    #             break
+    #     table.append('</tr>')
+    # table.append('</table>')
+    # table = '\n'.join(table)
     
     
-    html = f'<html><head>{stylesheet}<title>{title}</title></head><body><center>{table}</center></body></html>'
+    # html = f'<html><head>{stylesheet}<title>{title}</title></head><body><center>{table}</center></body></html>'
     
-    with open('galleries.html', 'w') as g:
-        g.write(html)
+    # with open('galleries.html', 'w') as g:
+    #     g.write(html)
+        
+    with open('galleries.html', 'w') as n:
+        n.write(render_template('manga_chapters_template.html', stylesheet=stylesheet, chapter_data=folders, title=title))
+        
     os.chdir(original_cwd)
+        
     
+def get_name_table(manga_data: dict):
+    # pass the data for key: "mangas"
+    status_for = dict()
+    
+    for k,v in manga_data.items():
+        for manga in v['manga'].values():
+            status_for[manga['display_name']] = manga['status']
+            
+    return status_for
+
 
 def make_manga_listing(folder: str):
     galleries = list()
+    manga_data = list()
+    
+    with open('D:/Programming/Projects/Web-Scraping/manga/manga sources.json', 'r') as ms:
+        manga_info = json.loads(ms.read())
+    
+    status_for = get_name_table(manga_info['mangas'])
+    
     for _ in os.scandir(folder):
         gal_path = f'{folder}/{_.name}/galleries.html'
         if os.path.exists(gal_path):
             galleries.append(_.name)
+            manga_data.append({'name': _.name, 'status': status_for[_.name]})
             
     stylesheet = (
         "<link rel=stylesheet href="
         + (os.path.abspath(folder).count("\\") * "../")
         + "Programming/Projects/NSFW/hentai_library/hentai.css>"
     )
-    gallery_links = list()
-    for name in galleries:
-        gallery_links.append(f'<a href="{name}/galleries.html">{name}</a>')
+    # gallery_links = list()
+    # for name in galleries:
+    #     gallery_links.append(f'<a href="{name}/galleries.html">{name}</a>')
         
-    table = ['<table>']
-    cols = 5
-    rows = math.ceil(len(galleries) / cols) 
-    chapter = 0
-    for i in range(rows):
-        table.append('<tr>')
-        for j in range(cols):
-            table.append(f'<td><a href="{galleries[chapter]}/galleries.html"><img src="{galleries[chapter]}/thumb.jpg"><br>{galleries[chapter]}</a></td>')
-            chapter += 1
-            if chapter >= len(galleries):
-                break
-        table.append('</tr>')
-    table.append('</table>')
-    table = '\n'.join(table)
+    # table = ['<table>']
+    # cols = 5
+    # rows = math.ceil(len(galleries) / cols) 
+    # chapter = 0
+    # for i in range(rows):
+    #     table.append('<tr>')
+    #     for j in range(cols):
+    #         table.append(f'<td><a href="{galleries[chapter]}/galleries.html"><img src="{galleries[chapter]}/thumb.jpg"><br>{galleries[chapter]}</a></td>')
+    #         chapter += 1
+    #         if chapter >= len(galleries):
+    #             break
+    #     table.append('</tr>')
+    # table.append('</table>')
+    # table = '\n'.join(table)
         
-    html = f'<html><head>{stylesheet}<title>Manga Listing</title></head><body><center>{table}</center></body></html>'
+    # html = f'<html><head>{stylesheet}<title>Manga Listing</title></head><body><center>{table}</center></body></html>'
     
-    with open(f'{folder}/manga.html', 'w') as m:
-        m.write(html)
+    # with open(f'{folder}/manga.html', 'w') as m:
+    #     m.write(html)
+        
+    with open(f'{folder}/manga.html','w') as n:
+        n.write(render_template('manga_listing_template.html', stylesheet=stylesheet, manga_data=json.dumps(manga_data)))
+        
+
+def render_template(template_name: str, **kwargs):
+    global env
+    template = env.get_template(template_name)
+    return template.render(**kwargs)

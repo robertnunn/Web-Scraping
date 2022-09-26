@@ -64,6 +64,8 @@ for site in mangas.keys():
             data['status'], title, new_chapters = dl_gallery(base_url, manga, download_folder, headers, data['display_name'])
             if data['display_name']:
                 title = data["display_name"]
+            else:
+                data['display_name'] = title
             
             manga_path = f"{download_folder}/{title}"
             if len(new_chapters) > 0:

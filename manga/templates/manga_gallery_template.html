@@ -1,0 +1,104 @@
+<html>
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@6.x/css/materialdesignicons.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+  </head>
+  <title>{{ page_title }}</title>
+  <body>
+    <div id="app">
+      <v-app>
+        <v-main>
+          <v-container fluid>
+          <v-row justify="center" class="">
+            <v-col align="right" class="pt-4">
+              <span>{{ title }}</span>
+            </v-col>
+            <v-col>
+            <div style="width: 50px">
+            <v-select
+              class="mt-0 pt-0"
+              :items="tocSizes"
+              v-model="tocWidth"
+              justify="center"
+            ></v-select></div></v-col>
+          </v-row>
+          <v-row justify="center" class="mb-1">
+            <v-sheet :width="tocChipSize * tocWidth" align="left" style="background-color: transparent">
+              <span
+                v-for="(num, index) of pageNums"
+                :key="index"
+                class=""
+
+              > 
+                <v-chip 
+                  :href="'#' + num"
+                  link
+                  outlined
+                  label
+                  small
+                  class="mb-0 text-sm-body-2"
+                  :color="chapterIndexes.includes(index) ? 'red' : 'light-green accent-3'"
+                  :title="chapterIndexes.includes(index) ? chapterTitles[chapterIndexes.indexOf(index)] : null"
+                  >
+                  Page [[ num ]]
+                </v-chip>
+              </span>
+            </v-sheet>
+          </v-row>
+          <v-row
+            v-for="pic of pages"
+            justify="center"
+          >
+            <center>
+              <v-divider class="my-2" style="background-color: white"></v-divider>
+              <img :src="pic" :title="picName(pic)" :id="picName(pic)">
+            </center>
+          </v-row>
+        </v-container>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+    <script>
+      var app = new Vue({
+        el: '#app',
+        delimiters: ['[[', ']]'],
+        vuetify: new Vuetify({
+          theme: {dark: true},
+        }),
+        data: {
+          pages: {{ page_list|safe }},
+          pageNums: [],
+          tocWidth: 10,
+          tocChipSize: 78.6,
+          tocSizes: [5,10,20],
+          chapterIndexes: {{ chapter_indices|safe }}, //expecting list
+          chapterTitles: {{ chapter_titles|safe }}, //expecting list
+        },
+        computed: {
+          
+        },
+        methods: {
+          picName(p) {
+            return p.slice(0,2)
+          },
+          chipColor(index) {
+            if(index == 4){
+              console.log('chip color matched')
+              return 'red'
+            }
+            else {
+              return ''
+            }
+          }
+        },
+        mounted() {
+          this.pages.forEach((e) => {this.pageNums.push(e.slice(0,2))})
+        }
+      })
+    </script>
+  </body>
+</html>
