@@ -35,19 +35,19 @@ def save_file(folder, filename, source_url, header_info):
         try:
             os.makedirs(folder, exist_ok=True)
             print('trying: ',full_path)
-            headers={
-                'Host': header_info['host'],
-                'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:100.0) Gecko/20100101 Firefox/100.0',
-                'Accept': 'image/avif,image/webp,*/*',
-                'Accept-Language': 'en-US,en;q=0.5',
-                'Accept-Encoding': 'gzip, deflate, br',
-                'Referer': header_info['referer'],
-                # 'Sec-Fetch-Dest': 'image',
-                # 'Sec-Fetch-Site': 'cross-site',
-                # 'Sec-Fetch-Mode': 'no-cors'
-            }
+            # headers={
+            #     'Host': header_info['Host'],
+            #     'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:100.0) Gecko/20100101 Firefox/100.0',
+            #     'Accept': 'image/avif,image/webp,*/*',
+            #     'Accept-Language': 'en-US,en;q=0.5',
+            #     'Accept-Encoding': 'gzip, deflate, br',
+            #     'Referer': header_info['Referer'],
+            #     # 'Sec-Fetch-Dest': 'image',
+            #     # 'Sec-Fetch-Site': 'cross-site',
+            #     # 'Sec-Fetch-Mode': 'no-cors'
+            # }
             # print(headers)
-            page = requests.get(source_url, headers=headers)
+            page = requests.get(source_url, headers=header_info)
             page.raise_for_status()
             print(f'Saving: {filename}')
             with open(full_path, 'wb') as data:
@@ -141,11 +141,11 @@ def make_local_gallery(folder, remake_gallery=False, toc_width=10, manga_title='
     if not os.path.exists(f"{folder}/gallery.html") or remake_gallery:
         # title attribute is hover alttext for links
         # bad_tags = load_tags('D:/Programming/Projects/NSFW/hentai_library/bad_tags.txt')
-        # stylesheet = (
-        #     "<link rel=stylesheet href="
-        #     + (os.path.abspath(folder).count("\\") * "../")
-        #     + "Programming/Projects/NSFW/hentai_library/hentai.css>"
-        # )
+        stylesheet = (
+            "<link rel=stylesheet href="
+            + (os.path.abspath(folder).count("\\") * "../")
+            + "Programming/Projects/NSFW/hentai_library/hentai.css>"
+        )
         # try:
         #     with open(f'{folder}/meta.json', 'r') as m:
         #         metadata = json.loads(m.read())
@@ -229,7 +229,7 @@ def make_local_gallery(folder, remake_gallery=False, toc_width=10, manga_title='
         # )  # insert TOC at the beginning, just after the gallery metadata, TOC is generated as img tags are generated
 
         with open(f"{folder}/gallery.html", "w", encoding="utf-8") as g:
-            g.write(render_template('manga_gallery_template.html', page_title=page_title, page_list=[f'{i[0]}.{i[1]}' for i in pix], chapter_indices=[i[0] for i in ch_list], chapter_titles=[i[1] for i in ch_list], title=os.path.basename(folder)))
+            g.write(render_template('manga_gallery_template.html', stylesheet=stylesheet, page_title=page_title, page_list=[f'{i[0]}.{i[1]}' for i in pix], chapter_indices=[i[0] for i in ch_list], chapter_titles=[i[1] for i in ch_list], title=os.path.basename(folder)))
             # g.write("\n".join(html))
 
 

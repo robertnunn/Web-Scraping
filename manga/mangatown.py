@@ -4,9 +4,9 @@ import bs4
 import requests
 import os
 
-status_re = re.compile('Status\(s\)\:\<\/b\>Ongoing')  
 
 def get_gallery(base_url, manga_url, download_folder, header_info, display_name=None):
+    status_re = re.compile('Status\(s\)\:\<\/b\>Ongoing')  
     zfill_size = 2
     # os.chdir(os.path.dirname(__file__))
     # base_url = 'https://www.mangatown.com'
@@ -28,7 +28,7 @@ def get_gallery(base_url, manga_url, download_folder, header_info, display_name=
     ch_folder = f'{download_folder}/{title}/'
     thumb_name = 'thumb.jpg'
     # if not os.path.exists(f'{ch_folder}{thumb_name}'):
-    save_file(ch_folder, thumb_name, thumb_src, {'referer': 'https://www.mangatown.com', 'host': 'fmcdn.mangahere.com'})
+    save_file(ch_folder, thumb_name, thumb_src, {'Referer': 'https://www.mangatown.com', 'Host': 'fmcdn.mangahere.com'})
     
     status = status_re.search(req.text)
     if status:

@@ -17,5 +17,5 @@ for manga in os.scandir():
             if chapter.is_dir():
                 print(chapter.name)
                 make_local_gallery(f'{manga.name}/{chapter.name}', True, manga_title=manga.name)
-        make_library_page(f'{library_folder}/{manga.name}', True)
+        make_library_page(f'{library_folder}/{manga.name}', False)
 make_manga_listing(library_folder)

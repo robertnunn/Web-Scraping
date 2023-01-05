@@ -1,15 +1,16 @@
 import json
 import os
-import requests
-import bs4
-import re
-from PIL import Image
-import copy
-from tqdm import tqdm
-import math
+# import requests
+# import bs4
+# import re
+# from PIL import Image
+# import copy
+# from tqdm import tqdm
+# import math
 from utils import make_manga_listing
 from utils import make_library_page
 from mangatown import get_gallery as get_mangatown_gallery
+from manganato import get_gallery as get_manganato_gallery
 
 
 def send_smtp_gmail(email_to: list, subject: str, msg: str, login_info='email.json', smtp_server="smtp.gmail.com:587"):
@@ -46,9 +47,11 @@ def send_smtp_gmail(email_to: list, subject: str, msg: str, login_info='email.js
 
 sites = {
     'mangatown': get_mangatown_gallery,
+    'manganato': get_manganato_gallery,
 }
 
 os.chdir(os.path.dirname(__file__))
+# with open('scrape_testing.json') as ms:
 with open('manga sources.json') as ms:
     manga_data = json.loads(ms.read())
 
