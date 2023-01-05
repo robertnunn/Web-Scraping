@@ -3,9 +3,10 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/@mdi/font@6.x/css/materialdesignicons.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+    {{ stylesheet|safe }}
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <title>{{ page_title }}</title>
   </head>
-  <title>{{ page_title }}</title>
   <body>
     <div id="app">
       <v-app>
@@ -38,11 +39,12 @@
                   outlined
                   label
                   small
+                  style="width: 95px;"
                   class="mb-0 text-sm-body-2"
                   :color="chapterIndexes.includes(index) ? 'red' : 'light-green accent-3'"
                   :title="chapterIndexes.includes(index) ? chapterTitles[chapterIndexes.indexOf(index)] : null"
                   >
-                  Page [[ num ]]
+                  <span>Page</span><span style="position:absolute; right:12px;">[[ num ]]</span>
                 </v-chip>
               </span>
             </v-sheet>
@@ -73,7 +75,7 @@
           pages: {{ page_list|safe }},
           pageNums: [],
           tocWidth: 10,
-          tocChipSize: 78.6,
+          tocChipSize: 95,
           tocSizes: [5,10,20],
           chapterIndexes: {{ chapter_indices|safe }}, //expecting list
           chapterTitles: {{ chapter_titles|safe }}, //expecting list
