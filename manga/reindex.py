@@ -1,5 +1,6 @@
 import os
 import re
+import json
 from nhentai import get_image_list, get_thumbnail_dims
 from PIL import Image
 
@@ -22,18 +23,18 @@ img_ext = [
 ]
 
 # settings
-remake_thumb = True
-starting_num = 1
-zfill_num = 2
+with open('reindex settings.json', 'r') as r:
+    settings = json.loads(r.read())
 
-# chapters = [i for i in range(1, 64)]
-chapters = [2,3]
-chapters = [str(i) for i in chapters]
-manga_folder = 'Magic Swordsman and Summoner'
+remake_thumb = settings['remake_thumbs']
+starting_num = settings['starting_num']
+zfill_num = settings['zfill_num']
+chapters = settings['chapters'] # key = chapter num, value = num of pages to rotate to the end
+manga_folder = settings['manga_folder']
 folder_base = f"D:/Weeb shit/Manga/{manga_folder}/Chapter "
 
 # currently setup for reindexing/rethumbing chapter folders where the first image is not indicative of the chapter
-for chapter in chapters:
+for chapter in chapters.keys():
     folder = folder_base + chapter
     os.chdir(folder)
     print(folder)
@@ -47,6 +48,25 @@ for chapter in chapters:
         files.remove('gallery.html')
     except:
         pass
+    
+    # move {num} pages to the end
+    last_page_num = int(files[-1].split('.')[0])
+    for i in range(chapters[chapter]):
+        filename = files[i]
+        ext = filename[filename.rfind(".") :]
+        os.rename(filename, f'{str(last_page_num+i+1).zfill(zfill_num)}{ext}')
+    
+    # refresh file listing
+    files = [i.name for i in os.scandir() if os.path.isfile(i)]  # sort by name
+    try:
+        files.remove('thumb.png')
+    except:
+        pass
+    try:
+        files.remove('gallery.html')
+    except:
+        pass
+    
     for filename in files:   # reindexing code
         if os.path.isfile(filename):
             ext = filename[filename.rfind(".") :]
