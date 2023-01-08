@@ -21,6 +21,7 @@ img_ext = [
     ".gif",
     ".bmp",
 ]
+os.chdir(os.path.dirname(__file__))
 
 # settings
 with open('reindex settings.json', 'r') as r:
