@@ -58,6 +58,30 @@
               <img :src="pic" :title="picName(pic)" :id="picName(pic)">
             </center>
           </v-row>
+          <center><v-row
+            style="width: 600px"
+            justify="center"
+            class="mt-8 mb-2"
+            v-if="prev_link.length > 0 || next_link.length > 0"
+          >
+            <v-btn
+              v-if="prev_link.length > 0"
+              :href="prev_link"
+              outlined
+              :color="linkColor"
+            >
+              <v-icon>mdi-arrow-left-drop-circle</v-icon>Previous Chapter
+            </v-btn>
+            <v-spacer></v-spacer>
+            <v-btn
+              v-if="next_link.length > 0"
+              :href="next_link"
+              outlined
+              :color="linkColor"
+            >
+              Next Chapter<v-icon>mdi-arrow-right-drop-circle</v-icon>
+            </v-btn>
+          </v-row></center>
         </v-container>
         </v-main>
       </v-app>
@@ -77,6 +101,9 @@
           tocWidth: 10,
           tocChipSize: 95,
           tocSizes: [5,10,20],
+          linkColor: "light-green accent-3",
+          prev_link: "",
+          next_link: "",
           chapterIndexes: {{ chapter_indices|safe }}, //expecting list
           chapterTitles: {{ chapter_titles|safe }}, //expecting list
         },
