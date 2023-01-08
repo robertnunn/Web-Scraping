@@ -15,6 +15,11 @@ def get_gallery(base_url, manga_url, download_folder, header_info, display_name=
     req = requests.get(full_url)
     req.raise_for_status()
     soup = bs4.BeautifulSoup(req.text, 'lxml')
+    if '404' in soup.title.string:
+        full_url = f"{base_url.replace('manga', 'chapmanga')}/manga-{manga_url}"
+        req = requests.get(full_url)
+        req.raise_for_status()
+        soup = bs4.BeautifulSoup(req.text, 'lxml')
     
     if display_name:
         title = display_name
